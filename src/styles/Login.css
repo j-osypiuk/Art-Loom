@@ -1,0 +1,119 @@
+.cmp-login {
+  background-color: var(--clr-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: 90rem;
+  min-height: 70dvh;
+  margin-left: auto;
+  margin-right: auto;
+
+  margin-top: 15rem;
+
+  border-radius: 0.75rem;
+
+  /*box-shadow: var(--shadow-default);*/
+}
+
+.cmp-login__form-wrap {
+  width: 50%;
+  padding: 3.2rem 3.2rem 1.6rem 3.2rem;
+}
+
+.cmp-login__quote-wrap {
+  width: 50%;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 3.2rem;
+  border-bottom-left-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  background-color: var(--clr-green-dark);
+}
+
+.cmp-login__btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.cmp-login__button {
+  background-color: var(--clr-green);
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.8rem 1.6rem;
+  justify-self: center;
+  transition: var(--transition-default);
+  letter-spacing: 1.4px;
+}
+
+.cmp-login__button:hover {
+  background-color: var(--clr-green-dark);
+}
+
+.cmp-login__header {
+  text-align: center;
+  font-size: 3.6rem;
+  letter-spacing: 1.2px;
+}
+
+.cmp-login__info {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+.cmp-login__form {
+  width: 100%;
+  margin-top: 4.8rem;
+}
+
+
+.cmp-login__quote {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.cmp-login__author {
+  font-size: 1.8rem;
+  margin-top: 2.4rem;
+  text-align: end;
+}
+
+.cmp-login__input {
+  width: 100%;
+  color: inherit;
+  font-size: 1.6rem;
+  display: block;
+  border-bottom: var(--clr-tertiary) solid 2px;
+  background-color: var(--clr-secondary);
+  padding: 0.8rem 0.6rem;
+  transition: var(--transition-default);
+  border-radius: 0.25rem;
+}
+
+.cmp-login__input--focused {
+  background-color: rgba(21, 128, 61, 0.15);
+  border-bottom: var(--clr-green-dark) solid 2px;
+}
+
+.cmp-login__input-label {
+  display: block;
+
+  font-size: 1.4rem;
+  margin: 2rem 0 0.8rem 0;
+}
+
+.cmp-login__sign-in:link, .cmp-login__sign-in:visited {
+  text-decoration: none;
+  color: var(--clr-green);
+  transition: var(--transition-default);
+}
+
+.cmp-login__sign-in:hover, .cmp-login__sign-in:focus {
+  color: var(--clr-green-dark);
+}

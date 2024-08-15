@@ -1,0 +1,70 @@
+/*- Font sizes (px)*/
+/*10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98*/
+
+/*- Line heights*/
+/*Small: 1.05*/
+/*Medium: 1.2*/
+/*Paragraph default: 1.6*/
+
+/*- Letter spacing*/
+/*-0.5px*/
+/*0.75px*/
+
+/*05 SHADOWS*/
+/*0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);*/
+
+/*Spacing system (px)*/
+/*2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128*/
+
+:root {
+  --clr-bg: #18181b;
+  --clr-secondary: #27272a;
+  --clr-tertiary: #3f3f46;
+  --clr-green-dark: #15803d;
+  --clr-green: #16a34a;
+  --clr-green-light: #22c55e;
+  --clr-red-dark:#b91c1c;
+  --clr-red: #dc2626;
+  --clr-red-light: #ef4444;
+  --clr-blue-dark: #1d4ed8;
+  --clr-blue: #2563eb;
+  --clr-blue-light: #3b82f6;
+  --clr-yellow-dark: #eab308;
+  --clr-yellow: #facc15;
+  --clr-yellow-light: #fde047;
+  --clr-purple-dark: #7e22ce;
+  --clr-purple: #9333ea;
+  --clr-purple-light: #a855f7;
+
+  --transition-default: all 0.3s;
+
+  --shadow-default: 0 4.8rem 6.4rem rgba(63, 63, 70, 0.075);
+
+  --border-radius-default: 0.8rem;
+  --border-radius-sm: 0.8rem;
+  --border-radius-lg: 1.6rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--clr-bg);
+  font-family: sans-serif;
+  color: #fff;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
