@@ -17,8 +17,8 @@
 /*2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128*/
 
 :root {
-  --clr-bg: #18181b;
-  --clr-secondary: #27272a;
+  --clr-secondary: #18181b;
+  --clr-bg: #27272a;
   --clr-tertiary: #3f3f46;
   --clr-green-dark: #15803d;
   --clr-green: #16a34a;

@@ -1,6 +1,5 @@
 .cmp-login {
   background-color: var(--clr-secondary);
-  display: flex;
   justify-content: center;
   align-items: center;
 
@@ -9,20 +8,42 @@
   margin-left: auto;
   margin-right: auto;
 
-  margin-top: 15rem;
+  position: relative;
+  /*margin-top: 15rem;*/
 
   border-radius: 0.75rem;
 
   /*box-shadow: var(--shadow-default);*/
+  transition: var(--transition-default);
+}
+
+.cmp-login.sign-up-mode {
+  max-width: 120rem;
 }
 
 .cmp-login__form-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+
   width: 50%;
   padding: 3.2rem 3.2rem 1.6rem 3.2rem;
+  transition: var(--transition-default);
+}
+
+.cmp-login.sign-up-mode .cmp-login__form-wrap {
+  left: 0;
+  width: 67%;
 }
 
 .cmp-login__quote-wrap {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   width: 50%;
+  height: 100%;
   align-self: stretch;
   display: flex;
   align-items: center;
@@ -30,12 +51,29 @@
   border-bottom-left-radius: 0.75rem;
   border-top-left-radius: 0.75rem;
   background-color: var(--clr-green-dark);
+  transition: var(--transition-default);
+  z-index: 1;
+}
+
+.cmp-login.sign-up-mode .cmp-login__quote-wrap {
+  left: 67%;
+  width: 33%;
+}
+
+.cmp-login__input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cmp-login__sign-up-wrap {
+  width: 100%;
 }
 
 .cmp-login__btn-wrap {
   display: flex;
   justify-content: center;
-  margin-top: 4rem;
+  margin: 4rem 0;
 }
 
 .cmp-login__button {
@@ -67,11 +105,21 @@
   margin-top: 2rem;
 }
 
-.cmp-login__form {
+.cmp-login__sing-in-form {
   width: 100%;
   margin-top: 4.8rem;
 }
 
+.cmp_login__sign-up-form {
+  width: 100%;
+}
+
+.cmp-login__input-wrap {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-top: 3rem;
+}
 
 .cmp-login__quote {
   font-size: 3rem;
@@ -84,30 +132,6 @@
   text-align: end;
 }
 
-.cmp-login__input {
-  width: 100%;
-  color: inherit;
-  font-size: 1.6rem;
-  display: block;
-  border-bottom: var(--clr-tertiary) solid 2px;
-  background-color: var(--clr-secondary);
-  padding: 0.8rem 0.6rem;
-  transition: var(--transition-default);
-  border-radius: 0.25rem;
-}
-
-.cmp-login__input--focused {
-  background-color: rgba(21, 128, 61, 0.15);
-  border-bottom: var(--clr-green-dark) solid 2px;
-}
-
-.cmp-login__input-label {
-  display: block;
-
-  font-size: 1.4rem;
-  margin: 2rem 0 0.8rem 0;
-}
-
 .cmp-login__sign-in:link, .cmp-login__sign-in:visited {
   text-decoration: none;
   color: var(--clr-green);
@@ -116,4 +140,12 @@
 
 .cmp-login__sign-in:hover, .cmp-login__sign-in:focus {
   color: var(--clr-green-dark);
+}
+
+.cmp-login__select {
+  width: 100%;
+  padding: 0.8rem 0.6rem;
+  color: inherit;
+  font-size: 1.6rem;
+  background-color: var(--clr-secondary);
 }
