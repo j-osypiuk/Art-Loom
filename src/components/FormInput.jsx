@@ -1,20 +1,14 @@
 const FormInput = ({inputName, label, type}) => {
 
-    const handleInputFocus = (event) => {
+    const handleInputAction = (event) => {
         const input = event.target;
-        input.classList = "cmp-input__input cmp-input__input--focused";
 
+        if (input.value !== "")
+            return;
+
+        input.classList.toggle("cmp-input__input--focused");
         const label = document.querySelector(`label[for="${input.id}"]`);
-        label.classList = "cmp-input__label cmp-input__label--focused";
-    };
-
-    const handleInputBlur = (event) => {
-        const input = event.target;
-        if (input.value !== "") return;
-        input.classList = "cmp-input__input";
-
-        const label = document.querySelector(`label[for="${input.id}"]`);
-        label.classList = "cmp-input__label";
+        label.classList.toggle("cmp-input__label--focused");
     };
 
     return (
@@ -23,8 +17,8 @@ const FormInput = ({inputName, label, type}) => {
                 {label}
             </label>
             <input
-                onFocus={handleInputFocus}
-                onBlur={handleInputBlur}
+                onFocus={handleInputAction}
+                onBlur={handleInputAction}
                 type={type}
                 name={inputName}
                 id={inputName}
