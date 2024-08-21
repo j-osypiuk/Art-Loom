@@ -1,19 +1,24 @@
+.cmp-login__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100dvh;
+}
+
 .cmp-login {
   background-color: var(--clr-secondary);
-  justify-content: center;
-  align-items: center;
 
   max-width: 90rem;
-  min-height: 70dvh;
-  margin-left: auto;
-  margin-right: auto;
-
+  width: 100%;
+  min-height: 50rem;
+  margin: 0 1.6rem;
   position: relative;
-  /*margin-top: 15rem;*/
 
   border-radius: 0.75rem;
 
-  /*box-shadow: var(--shadow-default);*/
+  box-shadow: var(--shadow-default);
   transition: var(--transition-default);
 }
 
@@ -21,7 +26,7 @@
   max-width: 120rem;
 }
 
-.cmp-login__form-wrap {
+.cmp-login__sign-in-wrap, .cmp-login__sign-up-wrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -29,12 +34,35 @@
 
   width: 50%;
   padding: 3.2rem 3.2rem 1.6rem 3.2rem;
-  transition: var(--transition-default);
 }
 
-.cmp-login.sign-up-mode .cmp-login__form-wrap {
+.cmp-login__sign-in-wrap {
+  transition: left 0.3s, width 0.3s, opacity 0.05s ease-in-out 0.06s;
+}
+
+.cmp-login__sign-up-wrap {
+  transition: left 0.3s, width 0.3s, opacity 0.01s ease-in-out 0.11s;
+}
+
+.cmp-login.sign-up-mode .cmp-login__sign-in-wrap,
+.cmp-login.sign-up-mode .cmp-login__sign-up-wrap {
   left: 0;
-  width: 67%;
+  width: 62.5%;
+}
+
+.cmp-login.sign-up-mode .cmp-login__sign-in-wrap {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cmp-login.sign-up-mode .cmp-login__sign-up-wrap {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cmp-login .cmp-login__sign-up-wrap {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .cmp-login__quote-wrap {
@@ -44,7 +72,6 @@
   transform: translateY(-50%);
   width: 50%;
   height: 100%;
-  align-self: stretch;
   display: flex;
   align-items: center;
   padding: 3.2rem;
@@ -56,24 +83,15 @@
 }
 
 .cmp-login.sign-up-mode .cmp-login__quote-wrap {
-  left: 67%;
-  width: 33%;
-}
-
-.cmp-login__input-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.cmp-login__sign-up-wrap {
-  width: 100%;
+  left: 62.5%;
+  width: 37.5%;
+  border-radius: 0 0.75rem 0.75rem 0;
 }
 
 .cmp-login__btn-wrap {
   display: flex;
   justify-content: center;
-  margin: 4rem 0;
+  margin: 4rem 0 3.2rem 0;
 }
 
 .cmp-login__button {
@@ -102,23 +120,11 @@
 .cmp-login__info {
   text-align: center;
   font-size: 1.4rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
-.cmp-login__sing-in-form {
+.cmp-login__sign-in-form {
   width: 100%;
-  margin-top: 4.8rem;
-}
-
-.cmp_login__sign-up-form {
-  width: 100%;
-}
-
-.cmp-login__input-wrap {
-  display: flex;
-  width: 100%;
-  position: relative;
-  margin-top: 3rem;
 }
 
 .cmp-login__quote {
@@ -132,20 +138,31 @@
   text-align: end;
 }
 
-.cmp-login__sign-in:link, .cmp-login__sign-in:visited {
+.cmp-login__sign-up:link, .cmp-login__sign-up:visited {
   text-decoration: none;
   color: var(--clr-green);
   transition: var(--transition-default);
 }
 
-.cmp-login__sign-in:hover, .cmp-login__sign-in:focus {
+.cmp-login__sign-up:hover, .cmp-login__sign-up:focus {
   color: var(--clr-green-dark);
 }
 
-.cmp-login__select {
+.cmp-login__input-wrap {
+  display: flex;
+  gap: 3.2rem;
+}
+.cmp-login__input-col {
+  flex-grow: 1;
+}
+
+.artField {
   width: 100%;
   padding: 0.8rem 0.6rem;
-  color: inherit;
-  font-size: 1.6rem;
+  border-radius: 0.25rem;
   background-color: var(--clr-secondary);
+  color: var(--clr-tertiary);
+  border-bottom: var(--clr-tertiary) solid 2px;
+  font-size: 1.6rem;
+  margin-top: 3rem;
 }
