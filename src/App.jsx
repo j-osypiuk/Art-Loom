@@ -1,13 +1,13 @@
 import "./styles/App.css";
 import "./styles/Login.css";
 import "./styles/FormInput.css"
-import Login from "./components/Login";
+import WelcomeForm from "./components/WelcomeForm.jsx";
 
 
 function App() {
   return (
     <>
-      <Login />
+      <WelcomeForm />
     </>
   );
 }

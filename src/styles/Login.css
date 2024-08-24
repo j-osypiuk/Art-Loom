@@ -22,7 +22,7 @@
   transition: var(--transition-default);
 }
 
-.cmp-login.sign-up-mode {
+.cmp-login.cmp-login--sign-up-mode {
   max-width: 120rem;
 }
 
@@ -44,18 +44,18 @@
   transition: left 0.3s, width 0.3s, opacity 0.01s ease-in-out 0.11s;
 }
 
-.cmp-login.sign-up-mode .cmp-login__sign-in-wrap,
-.cmp-login.sign-up-mode .cmp-login__sign-up-wrap {
+.cmp-login.cmp-login--sign-up-mode .cmp-login__sign-in-wrap,
+.cmp-login.cmp-login--sign-up-mode .cmp-login__sign-up-wrap {
   left: 0;
   width: 62.5%;
 }
 
-.cmp-login.sign-up-mode .cmp-login__sign-in-wrap {
+.cmp-login.cmp-login--sign-up-mode .cmp-login__sign-in-wrap {
   opacity: 0;
   pointer-events: none;
 }
 
-.cmp-login.sign-up-mode .cmp-login__sign-up-wrap {
+.cmp-login.cmp-login--sign-up-mode .cmp-login__sign-up-wrap {
   opacity: 1;
   pointer-events: auto;
 }
@@ -82,7 +82,7 @@
   z-index: 1;
 }
 
-.cmp-login.sign-up-mode .cmp-login__quote-wrap {
+.cmp-login.cmp-login--sign-up-mode .cmp-login__quote-wrap {
   left: 62.5%;
   width: 37.5%;
   border-radius: 0 0.75rem 0.75rem 0;
