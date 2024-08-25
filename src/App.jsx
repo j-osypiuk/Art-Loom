@@ -1,5 +1,5 @@
 import "./styles/App.css";
-import "./styles/Login.css";
+import "./styles/WelcomeForm.css";
 import "./styles/FormInput.css"
 import WelcomeForm from "./components/WelcomeForm.jsx";
 

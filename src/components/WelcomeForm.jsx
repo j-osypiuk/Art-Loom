@@ -124,7 +124,7 @@ const WelcomeForm = () => {
             <p className="cmp-login__info">
               Not registered yet? <a className="cmp-login__sign-up" onClick={changeFormMode} href="#">sign up</a>
             </p>
-            <form method="post" className="cmp-login__sign-in-form" autoComplete="off">
+            <form method="post" className="cmp-login__form" autoComplete="off">
               {
                 loginData.map((inputData) => {
                     return (
@@ -144,7 +144,7 @@ const WelcomeForm = () => {
             <p className="cmp-login__info">
               Already have account? <a className="cmp-login__sign-up" onClick={changeFormMode} href="#">sign in</a>
             </p>
-            <form method="post" className="cmp-login__sign-in-form" autoComplete="off">
+            <form method="post" className="cmp-login__form" autoComplete="off">
               <div className="cmp-login__input-wrap">
                 <div className="cmp-login__input-col">
                   {
