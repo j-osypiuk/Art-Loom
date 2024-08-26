@@ -1,7 +1,7 @@
 import { useState } from "react";
-import FormInput from "./FormInput.jsx";
+import FormInput from "../components/FormInput.jsx";
 
-const WelcomeForm = () => {
+const LoginPage = () => {
   const [artForms, setArtForms] = useState(["Music", "Painting", "Drawing", "Sculpture", "Digital Art", "Photography", "Writing", "Film Making", "Dance"]);
   const [loginData, setLoginData] = useState([
     {
@@ -184,4 +184,4 @@ const WelcomeForm = () => {
   );
 };
 
-export default WelcomeForm;
+export default LoginPage;
