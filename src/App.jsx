@@ -7,16 +7,18 @@ import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import UserPage from "./pages/UserPage.jsx";
 import Header from "./components/Header.jsx";
+import DiscoverPage from "./pages/DiscoverPage.jsx";
 
 
 function App() {
   return (
       <>
-        <Header />
         <main>
             <Router>
+                <Header />
                 <Routes>
                     <Route path="/" element={<HomePage />} />
+                    <Route path="/discover" element={<DiscoverPage />} />
                     <Route path="/profile" element={<UserPage />} />
                     <Route path="/login" element={<LoginPage />} />
                 </Routes>
