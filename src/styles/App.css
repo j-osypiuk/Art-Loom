@@ -20,21 +20,24 @@
   --clr-secondary: #18181b;
   --clr-bg: #27272a;
   --clr-tertiary: #3f3f46;
+  --clr-gray-200: #e4e4e7;
+  --clr-gray-300: #d4d4d8;
+  --clr-gray-400: #a1a1aa;
   --clr-green-dark: #15803d;
   --clr-green: #16a34a;
   --clr-green-light: #22c55e;
-  --clr-red-dark:#b91c1c;
-  --clr-red: #dc2626;
-  --clr-red-light: #ef4444;
+  --clr-red-dark: #991b1b;
+  --clr-red: #b91c1c;
+  --clr-red-light: #dc2626;
   --clr-blue-dark: #1d4ed8;
   --clr-blue: #2563eb;
   --clr-blue-light: #3b82f6;
   --clr-yellow-dark: #eab308;
   --clr-yellow: #facc15;
   --clr-yellow-light: #fde047;
-  --clr-purple-dark: #7e22ce;
-  --clr-purple: #9333ea;
-  --clr-purple-light: #a855f7;
+  --clr-purple-dark: #6b21a8;
+  --clr-purple: #7e22ce;
+  --clr-purple-light: #9333ea;
 
   --transition-default: all 0.3s;
 
@@ -67,4 +70,11 @@ body {
 input:focus,
 textarea:focus {
   outline: none;
+}
+
+.cmp-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
