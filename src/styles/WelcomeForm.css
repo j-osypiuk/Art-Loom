@@ -8,7 +8,7 @@
 
 .cmp-login {
   background-color: var(--clr-secondary);
-  border-radius: 0.75rem;
+  border-radius: 0.4rem;
   box-shadow: var(--shadow-default);
   max-width: 90rem;
   min-height: 50rem;
@@ -61,8 +61,8 @@
 .cmp-login__quote-wrap {
   align-items: center;
   background-color: var(--clr-green-dark);
-  border-bottom-left-radius: 0.75rem;
-  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.4rem;
+  border-top-left-radius: 0.4rem;
   display: flex;
   height: 100%;
   left: 0;
@@ -76,7 +76,7 @@
 }
 
 .cmp-login.cmp-login--sign-up-mode .cmp-login__quote-wrap {
-  border-radius: 0 0.75rem 0.75rem 0;
+  border-radius: 0 0.4rem 0.4rem 0;
   left: 62.5%;
   width: 37.5%;
 }
@@ -91,7 +91,7 @@
 .cmp-login__button {
   background-color: var(--clr-green);
   border: none;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
   cursor: pointer;
   color: #fff;
   font-size: 2rem;
