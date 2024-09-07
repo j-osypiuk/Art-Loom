@@ -1,0 +1,65 @@
+.cmp-event-card:link, .cmp-event-card:visited {
+    text-decoration: none;
+    display: flex;
+    align-items: stretch;
+    min-width: 30rem;
+    background-color: var(--clr-tertiary);
+    border-radius: 0.4rem;
+    box-shadow: 0 1rem 1.8rem 0 rgba(0, 0, 0, 0.1);
+    transition: var(--transition-default);
+}
+
+.cmp-event-card:hover, .cmp-event-card:focus {
+    cursor: pointer;
+    filter: brightness(0.9);
+    scale: 1.02;
+}
+
+.cmp-event-card__icon-wrap {
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    padding: 1.6rem;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-purple);
+}
+
+.cmp-event-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    stroke:  var(--clr-gray-200);;
+}
+
+.cmp-event-card__content-wrap {
+    width: 70%;
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cmp-event-card__title {
+    color: var(--clr-gray-200);
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.cmp-event-card__location {
+    color: var(--clr-gray-300);
+    font-size: 1.4rem;
+    margin-top: 1.6rem;
+    letter-spacing: 0.5px;
+}
+
+.cmp-event-card__date {
+    color: var(--clr-gray-300);
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
