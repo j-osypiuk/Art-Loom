@@ -14,6 +14,7 @@ import DiscoverSection from "./components/DiscoverSection.jsx";
 function App() {
   return (
     <div className="cmp-container">
+        <EventsSection />
         <DiscoverSection />
     </div>
   );
