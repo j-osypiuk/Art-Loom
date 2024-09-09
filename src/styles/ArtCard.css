@@ -1,7 +1,6 @@
 .cmp-art-card {
     background-size: cover;
     height: 40rem;
-    width: 30rem;
     transition: var(--transition-default);
     position: relative;
     border-radius: 0.4rem;
