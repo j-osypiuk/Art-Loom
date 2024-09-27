@@ -1,27 +1,36 @@
 import "./styles/App.css";
-import "./styles/WelcomeForm.css";
+import "./styles/LoginForm.css";
 import "./styles/FormInput.css"
+import "./styles/Header.css"
 import "./styles/EventCard.css"
 import "./styles/EventsSection.css";
 import "./styles/ArtCard.css"
 import "./styles/DiscoverSection.css";
 import "./styles/UserCard.css"
 import "./styles/ProfilePhoto.css"
-import WelcomeForm from "./components/WelcomeForm.jsx";
-import EventCard from "./components/EventCard.jsx";
-import EventsSection from "./components/EventsSection.jsx";
-import ArtCard from "./components/ArtCard.jsx";
-import DiscoverSection from "./components/DiscoverSection.jsx";
-import UserCard from "./components/UserCard.jsx";
-import ProfilePhoto from "./components/ProfilePhoto.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import UserPage from "./pages/UserPage.jsx";
+import Header from "./components/Header.jsx";
+import DiscoverPage from "./pages/DiscoverPage.jsx";
+
 
 function App() {
   return (
-    <div className="cmp-container">
-        <UserCard />
-        <EventsSection />
-        <DiscoverSection />
-    </div>
+      <>
+        <main>
+            <Router>
+                <Header />
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/discover" element={<DiscoverPage />} />
+                    <Route path="/profile" element={<UserPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                </Routes>
+            </Router>
+        </main>
+      </>
   );
 }
 
