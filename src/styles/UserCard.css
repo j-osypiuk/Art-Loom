@@ -1,0 +1,84 @@
+.cmp-user-card {
+    background-color: var(--clr-tertiary);
+    width: 32rem;
+    border-radius: 0.4rem;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+    transition: var(--transition-default);
+
+    margin: 4rem 0;
+}
+
+.cmp-user-card:hover {
+    box-shadow: 0 1.5rem 2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.cmp-user-card__image {
+    background-image: url("src/assets/profile-photo.jpg");
+    background-size: cover;
+    height: 20rem;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.cmp-user-card__data_wrap {
+    padding: 0.8rem;
+}
+
+.cmp-user-card__nickname {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--clr-gray-200);
+}
+
+.cmp-user-card__art-field-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.8rem 0;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.cmp-user-card__art-field {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.2rem;
+    background-color: var(--clr-green);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--clr-gray-200);
+    text-transform: uppercase;
+}
+
+hr {
+    border: none; /* Removes default border */
+    height: 3px;  /* Sets thickness of the line */
+    background-color: var(--clr-green-dark);  /* Sets color of the line */
+    border-radius: 50%;
+    width: 90%;  /* Adjusts width (can be in px or %) */
+    margin: 0 auto 0.8rem auto;  /* Centers the line and adds space above and below */
+}
+
+.cmp-user-card__info {
+    font-size: 1.6rem;
+    padding:  0.8rem;
+    color: var(--clr-gray-300);
+}
+
+.cmp-user-card__btn {
+    width: 100%;
+    background-color: var(--clr-green);
+    padding: 0.8rem;
+    font-size: 1.6rem;
+    color: var(--clr-gray-200);
+    border-bottom-left-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    transition: var(--transition-default);
+}
+
+.cmp-user-card__btn:hover {
+    background-color: var(--clr-green-dark);
+    cursor: pointer;
+}

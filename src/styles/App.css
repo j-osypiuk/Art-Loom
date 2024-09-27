@@ -75,6 +75,7 @@ textarea:focus {
 .cmp-container {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
 }
