@@ -8,6 +8,7 @@ import "./styles/ArtCard.css"
 import "./styles/DiscoverSection.css";
 import "./styles/UserCard.css"
 import "./styles/ProfilePhoto.css"
+import "./styles/Tag.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";

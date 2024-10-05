@@ -1,3 +1,6 @@
+import Tag from "./Tag.jsx";
+import {Colors} from "../utils/colors.js";
+
 const UserCard = ({props}) => {
     return (
         <div className="cmp-user-card">
@@ -6,11 +9,11 @@ const UserCard = ({props}) => {
                 <p className="cmp-user-card__nickname">Jane Wlazła</p>
                 <hr/>
                 <p className="cmp-user-card__art-field-wrap">
-                    <span className="cmp-user-card__art-field">SCULPTURE</span>
-                    <span className="cmp-user-card__art-field">MUSIC</span>
-                    <span className="cmp-user-card__art-field">CINEMA</span>
-                    <span className="cmp-user-card__art-field">PAINTING</span>
-                    <span className="cmp-user-card__art-field">DRAWING</span>
+                    <Tag props={{text: "SCULPTURE", bgColor: Colors.GREEN_DARK}}></Tag>
+                    <Tag props={{text: "MUSIC", bgColor: Colors.GREEN_DARK}}></Tag>
+                    <Tag props={{text: "CINEMA", bgColor: Colors.GREEN_DARK}}></Tag>
+                    <Tag props={{text: "PAINTING", bgColor: Colors.GREEN_DARK}}></Tag>
+                    <Tag props={{text: "DRAWING", bgColor: Colors.GREEN_DARK}}></Tag>
                 </p>
                 <p className="cmp-user-card__info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
