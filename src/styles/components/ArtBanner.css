@@ -6,18 +6,21 @@
     background-color: var(--clr-secondary);
     border-radius: 0.4rem;
     transition: var(--transition-default);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
 }
 
 .cmp-art-banner:hover, .cmp-art-banner:focus {
     cursor: pointer;
     filter: brightness(0.85);
-    scale: 1.02;
+    scale: 1.005;
+    box-shadow: 0 1.5rem 2rem 0 rgba(0, 0, 0, 0.5);
 }
 
 .cmp-art-banner__thumbnail-wrap {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--clr-secondary-light);
 }
 
 .cmp-art-banner__thumbnail {
@@ -38,8 +41,12 @@
     color: var(--clr-gray-300);
 }
 
-.cmp-art-banner__info-container {
+.cmp-art-banner__content-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.cmp-art-banner__content-wrap {
+    padding: 2.4rem;
 }
