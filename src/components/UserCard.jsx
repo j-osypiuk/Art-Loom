@@ -8,7 +8,7 @@ const UserCard = ({props}) => {
             <div className="cmp-user-card__data_wrap">
                 <p className="cmp-user-card__nickname">Jane Wlazła</p>
                 <hr/>
-                <p className="cmp-user-card__art-field-wrap">
+                <p className="cmp-user-card__tag-container tag-container">
                     <Tag props={{text: "SCULPTURE", bgColor: Colors.GREEN_DARK}}></Tag>
                     <Tag props={{text: "MUSIC", bgColor: Colors.GREEN_DARK}}></Tag>
                     <Tag props={{text: "CINEMA", bgColor: Colors.GREEN_DARK}}></Tag>

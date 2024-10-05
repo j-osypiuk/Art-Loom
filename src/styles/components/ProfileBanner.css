@@ -1,0 +1,101 @@
+.cpm-profile-banner {
+    position: relative;
+    width: 90%;
+    margin: 4rem auto;
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+}
+
+.cpm-profile-banner__top-container {
+    padding: 2.4rem;
+    display: flex;
+    gap: 2.4rem;
+}
+
+.cpm-profile-banner__name {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--clr-gray-200);
+}
+
+.cpm-profile-banner__description {
+    font-size: 1.6rem;
+    color: var(--clr-gray-300);
+}
+
+.cpm-profile-banner__photo {
+    object-fit: cover;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 0.2rem;
+}
+
+.cpm-profile-banner__bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2.4rem;
+    background-color: var(--clr-secondary-light);
+}
+
+.cpm-profile-banner__stats-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cpm-profile-banner__join-wrap,
+.cmp-profile-banner__icon-wrap {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0.4rem;
+    background-color: var(--clr-secondary);
+}
+
+.cpm-profile-banner__icon {
+    font-size: 2rem;
+    fill: var(--clr-gray-400);
+}
+
+.cpm-profile-banner__join-date,
+.cmp-profile-banner__stat-count {
+    font-size: 1.6rem;
+    color: var(--clr-gray-400);
+}
+
+.cpm-profile-banner__connect-btn {
+    background-color: var(--clr-green);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.6rem;
+    justify-self: center;
+    letter-spacing: 1.4px;
+    padding: 0.8rem 1.2rem;
+    transition: var(--transition-default);
+}
+
+.cpm-profile-banner__connect-btn:hover {
+    background-color: var(--clr-green-dark);
+}
+
+.cmp-profile-banner__settings-btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    font-size: 3rem;
+    color: #fff;
+    background-color: var(--clr-secondary);
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.cmp-profile-banner__settings-btn:hover {
+    color: var(--clr-gray-400);
+}

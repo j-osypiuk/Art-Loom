@@ -17,12 +17,12 @@ const ArtCard = ({props}) => {
              id={props.id}
              style={{backgroundImage: `url(${props.thumbnailPath})`}}>
             <div className="cmp-art-card__category-icon-wrap">
-                <FiMusic className="cmp-art-card__icon"/>
+                <FiMusic className="cmp-art-card__icon default-icon"/>
             </div>
             <div className="cmp-art-card__icons-wrap">
                 <div className="cmp-art-card__panel-wrap">
                     <div className="cmp-art-card__like-icon-wrap">
-                        <BiLike className="cmp-art-card__icon"/>
+                        <BiLike className="cmp-art-card__icon default-icon"/>
                     </div>
                     <div className="cmp-art-card__icon-sign-wrap">
                         <span className="cmp-art-card__icon-sign">{props.likesCount}</span>
@@ -30,7 +30,7 @@ const ArtCard = ({props}) => {
                 </div>
                 <div className="cmp-art-card__panel-wrap">
                     <div className="cmp-art-card__dislike-icon-wrap">
-                        <BiDislike className="cmp-art-card__icon"/>
+                        <BiDislike className="cmp-art-card__icon default-icon"/>
                     </div>
                     <div className="cmp-art-card__icon-sign-wrap">
                         <span className="cmp-art-card__icon-sign">{props.dislikesCount}</span>
@@ -38,7 +38,7 @@ const ArtCard = ({props}) => {
                 </div>
                 <div className="cmp-art-card__panel-wrap">
                     <div className="cmp-art-card__comment-icon-wrap">
-                        <FaRegCommentAlt className="cmp-art-card__icon"/>
+                        <FaRegCommentAlt className="cmp-art-card__icon default-icon"/>
                     </div>
                     <div className="cmp-art-card__icon-sign-wrap">
                         <span className="cmp-art-card__icon-sign">{props.commentsCount}</span>

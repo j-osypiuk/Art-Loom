@@ -48,6 +48,10 @@
     transition: var(--transition-default);
 }
 
+.cmp-art-card__icon {
+    font-size: 3rem;
+}
+
 .cmp-art-card__icons-wrap--visible {
     right: 0.8rem;
 }
@@ -79,15 +83,6 @@
 .cmp-art-card__dislike-icon-wrap:hover,
 .cmp-art-card__comment-icon-wrap:hover {
     background: rgba(0, 0, 0, 0.8);
-}
-
-.cmp-art-card__icon {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-    stroke:  var(--clr-gray-200);
 }
 
 .cmp-art-card__title-wrap {

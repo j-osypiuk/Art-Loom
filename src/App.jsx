@@ -1,14 +1,16 @@
 import "./styles/App.css";
-import "./styles/LoginForm.css";
-import "./styles/FormInput.css"
-import "./styles/Header.css"
-import "./styles/EventCard.css"
-import "./styles/EventsSection.css";
-import "./styles/ArtCard.css"
-import "./styles/DiscoverSection.css";
-import "./styles/UserCard.css"
-import "./styles/ProfilePhoto.css"
-import "./styles/Tag.css"
+import "./styles/forms/LoginForm.css";
+import "./styles/components/FormInput.css"
+import "./styles/components/Header.css"
+import "./styles/components/EventCard.css"
+import "./styles/components/EventsSection.css";
+import "./styles/components/ArtCard.css"
+import "./styles/components/DiscoverSection.css";
+import "./styles/components/UserCard.css"
+import "./styles/components/Tag.css"
+import "./styles/components/ProfileBanner.css"
+import "./styles/containers/TagContainer.css"
+import "./styles/icons/DefaultIcon.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
