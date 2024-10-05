@@ -5,6 +5,7 @@ import {BiLike} from "react-icons/bi";
 import {BiDislike} from "react-icons/bi";
 import {FaRegCommentAlt} from "react-icons/fa";
 import { CiSettings } from "react-icons/ci";
+import StatsBanner from "./StatsBanner.jsx";
 
 const ProfileBanner = ({props}) => {
 
@@ -12,7 +13,7 @@ const ProfileBanner = ({props}) => {
         <div className="cpm-profile-banner">
             <div className="cpm-profile-banner__top-container">
                 <img src={profilePhoto} alt="User profile photo" className="cpm-profile-banner__photo"/>
-                <button className="cmp-profile-banner__settings-btn" type="button" >
+                <button className="cmp-profile-banner__settings-btn" type="button">
                     <CiSettings/>
                 </button>
                 <div className="cpm-profile-banner__info-container">
@@ -36,28 +37,10 @@ const ProfileBanner = ({props}) => {
                     </p>
                 </div>
             </div>
-            <div className="cpm-profile-banner__bottom-container">
-                <div className="cpm-profile-banner__stats-container">
-                <div className="cmp-profile-banner__icon-wrap">
-                        <BiLike className="cpm-profile-banner__icon default-icon"/>
-                        <span className="cmp-profile-banner__stat-count">14</span>
-                    </div>
-                    <div className="cmp-profile-banner__icon-wrap">
-                        <BiDislike className="cpm-profile-banner__icon default-icon"/>
-                        <span className="cmp-profile-banner__stat-count">1434343</span>
-                    </div>
-                    <div className="cmp-profile-banner__icon-wrap">
-                        <FaRegCommentAlt className="cpm-profile-banner__icon default-icon"/>
-                        <span className="cmp-profile-banner__stat-count">314</span>
-                    </div>
-                    <div className="cpm-profile-banner__join-wrap">
-                        <p className="cpm-profile-banner__join-date">joined: 05-10-2024</p>
-                    </div>
-                </div>
-                <button type="submit" className="cpm-profile-banner__connect-btn">
-                    Connect
-                </button>
-            </div>
+            <StatsBanner props={{likes: 150, dislikes: 23, comments: 53, dateLabel: "joined", date: "05-10-2024"}}/>
+            <button type="submit" className="cpm-profile-banner__connect-btn">
+                Connect
+            </button>
         </div>
     )
 }

@@ -11,6 +11,8 @@ import "./styles/components/Tag.css"
 import "./styles/components/ProfileBanner.css"
 import "./styles/containers/TagContainer.css"
 import "./styles/icons/DefaultIcon.css"
+import "./styles/components/ArtBanner.css"
+import "./styles/components/StatsBanner.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
