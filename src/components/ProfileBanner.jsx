@@ -1,10 +1,7 @@
 import profilePhoto from "../assets/profile-photo.jpg"
 import Tag from "./Tag.jsx";
 import {Colors} from "../utils/colors.js";
-import {BiLike} from "react-icons/bi";
-import {BiDislike} from "react-icons/bi";
-import {FaRegCommentAlt} from "react-icons/fa";
-import { CiSettings } from "react-icons/ci";
+import {CiSettings} from "react-icons/ci";
 import StatsBanner from "./StatsBanner.jsx";
 
 const ProfileBanner = ({props}) => {
@@ -37,7 +34,7 @@ const ProfileBanner = ({props}) => {
                     </p>
                 </div>
             </div>
-            <StatsBanner props={{likes: 150, dislikes: 23, comments: 53, dateLabel: "joined", date: "05-10-2024"}}/>
+            <StatsBanner props={{likes: 150, dislikes: 23, comments: 53, dateLabel: "Joined", date: "05-10-2024"}}/>
             <button type="submit" className="cpm-profile-banner__connect-btn">
                 Connect
             </button>

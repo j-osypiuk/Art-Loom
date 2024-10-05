@@ -1,0 +1,45 @@
+.cmp-art-banner {
+    display: flex;
+    position: relative;
+    width: 90%;
+    margin: 4rem auto;
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+    transition: var(--transition-default);
+}
+
+.cmp-art-banner:hover, .cmp-art-banner:focus {
+    cursor: pointer;
+    filter: brightness(0.85);
+    scale: 1.02;
+}
+
+.cmp-art-banner__thumbnail-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cmp-art-banner__thumbnail {
+    background-size: cover;
+    width: 25rem;
+    border-radius: 0.4rem;
+}
+
+.cmp-art-banner__title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--clr-gray-200);
+}
+
+.cmp-art-banner__description {
+    font-size: 1.6rem;
+    color: var(--clr-gray-300);
+}
+
+.cmp-art-banner__info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
