@@ -1,6 +1,4 @@
 .cmp-art-banner {
-    display: flex;
-    position: relative;
     width: 90%;
     margin: 4rem auto;
     background-color: var(--clr-secondary);
@@ -16,40 +14,18 @@
     box-shadow: 0 1.5rem 2rem 0 rgba(0, 0, 0, 0.5);
 }
 
-.cmp-art-banner__thumbnail-wrap {
+.cmp-art-banner__top-container {
     display: flex;
-    align-items: start;
-    justify-content: center;
-    background-color: var(--clr-secondary-light);
-    border-bottom-left-radius: 0.4rem;
-    border-top-left-radius: 0.4rem;
+    gap: 2.4rem;
 }
 
 .cmp-art-banner__thumbnail {
-    background-size: cover;
     width: 25rem;
-    border-bottom-left-radius: 0.4rem;
     border-top-left-radius: 0.4rem;
-}
-
-.cmp-art-banner__title {
-    font-size: 2.4rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--clr-gray-200);
-}
-
-.cmp-art-banner__description {
-    font-size: 1.6rem;
-    color: var(--clr-gray-300);
-}
-
-.cmp-art-banner__content-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    align-self: start;
 }
 
 .cmp-art-banner__content-wrap {
-    padding: 2.4rem;
+    padding: 2.4rem 2.4rem 1.2rem 0;
+
 }

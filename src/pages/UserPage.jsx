@@ -29,7 +29,7 @@ const UserPage = () => {
                 {name: "cinema", bgColor: Colors.GREEN_DARK},
                 {name: "music", bgColor: Colors.PURPLE_DARK},
             ],
-            textHeight: 16.5
+            textHeight: 23.3
         },
         stats: {likes: 150, dislikes: 23, comments: 53, dateLabel: "Added", date: "05-10-2024"},
     }
@@ -42,7 +42,7 @@ const UserPage = () => {
             tags: [
                 {name: "music", bgColor: Colors.BLUE_DARK},
             ],
-            textHeight: 16.5
+            textHeight: 23.3
         },
         stats: {likes: 24, dislikes: 3, comments: 23, dateLabel: "Added", date: "05-10-2024"}
     }
