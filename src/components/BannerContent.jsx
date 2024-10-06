@@ -1,4 +1,6 @@
 import Tag from "./Tag.jsx";
+import TextWrap from "./TextWrap.jsx";
+import {Colors} from "../utils/colors.js";
 
 const BannerContent = ({props}) => {
     return (
@@ -13,7 +15,7 @@ const BannerContent = ({props}) => {
                     })
                 }
             </div>
-            <p className="cpm-banner-content__description">{props.description}</p>
+            <TextWrap props={{height: props.textHeight, fontSize: 1.6, color: Colors.GRAY_300, lineHeight: 1.2, text: props.description}}/>
         </div>
     )
 }

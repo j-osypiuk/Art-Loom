@@ -1,0 +1,22 @@
+.cmp-text-wrap__text-container {
+    overflow: hidden;
+    transition: var(--transition-default);
+}
+
+.cmp-text-wrap__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0.4rem;
+    color: var(--clr-gray-300);
+    font-size: 1.8rem;
+    background-color: var(--clr-secondary-dark);
+    cursor: pointer;
+    transition: var(--transition-default);
+    border-radius: 0.4rem;
+}
+
+.cmp-text-wrap__btn:hover {
+    background-color: var(--clr-gray-400);
+}
