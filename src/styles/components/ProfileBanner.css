@@ -32,7 +32,7 @@
     font-size: 1.6rem;
     letter-spacing: 1.4px;
     padding: 0.8rem 1.2rem;
-    transition: var(--transition-default);
+    transition: background-color 0.3s;;
 }
 
 .cpm-profile-banner__connect-btn:hover {
@@ -49,9 +49,46 @@
     color: #fff;
     background-color: var(--clr-secondary);
     cursor: pointer;
-    transition: var(--transition-default);
+    transition: color 0.3s;
 }
 
 .cmp-profile-banner__settings-btn:hover {
     color: var(--clr-gray-400);
+}
+
+@media (max-width: 680px) {
+
+    .cpm-profile-banner__connect-btn {
+        bottom: 0;
+        right: 0;
+        transform: translateY(100%);
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .cpm-profile-banner__top-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cpm-profile-banner__photo {
+        width: auto;
+    }
+
+    .cpm-profile-banner__photo-wrap {
+        position: relative;
+    }
+
+    .cmp-profile-banner__settings-btn {
+        top: auto;
+        bottom: -1.2rem;
+        right: -1.2rem;
+        font-size: 4rem;
+        border-radius: 0.4rem;
+        background-color: var(--clr-secondary-light);
+    }
 }

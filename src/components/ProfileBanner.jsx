@@ -8,10 +8,12 @@ const ProfileBanner = ({props}) => {
     return (
         <div className="cpm-profile-banner">
             <div className="cpm-profile-banner__top-container">
-                <img src={profilePhoto} alt="User profile photo" className="cpm-profile-banner__photo"/>
-                <button className="cmp-profile-banner__settings-btn" type="button">
-                    <CiSettings/>
-                </button>
+                <div className="cpm-profile-banner__photo-wrap">
+                    <img src={props.thumbnailUrl} alt="User profile photo" className="cpm-profile-banner__photo"/>
+                    <button className="cmp-profile-banner__settings-btn" type="button">
+                        <CiSettings/>
+                    </button>
+                </div>
                 <BannerContent props={props.content} />
             </div>
             <StatsBanner props={props.stats} />

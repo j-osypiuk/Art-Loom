@@ -32,3 +32,31 @@
     font-size: 1.6rem;
     color: var(--clr-gray-400);
 }
+
+.cmp-stats-banner__date-date {
+    text-wrap: nowrap;
+}
+
+@media (max-width: 680px) {
+
+    .cmp-stats-banner {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .cmp-stats-banner__date-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--clr-secondary-dark);
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .cmp-stats-banner__date-date {
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}

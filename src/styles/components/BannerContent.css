@@ -9,8 +9,16 @@
     color: var(--clr-gray-200);
 }
 
-.cpm-banner-content__description {
-    margin-top: 1.6rem;
-    font-size: 1.6rem;
-    color: var(--clr-gray-300);
+@media (max-width: 530px) {
+
+    .cpm-banner-content__title {
+        text-align: center;
+    }
+
+    .cpm-banner-content__tag-container {
+        justify-content: center;
+        margin-top: 0.8rem;
+        margin-bottom: 1.6rem;
+    }
+
 }

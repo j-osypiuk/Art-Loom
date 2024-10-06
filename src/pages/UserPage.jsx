@@ -5,6 +5,7 @@ import {Colors} from "../utils/colors.js";
 const UserPage = () => {
 
     const profileData = {
+        thumbnailUrl: "src/assets/profile-photo.jpg",
         content: {
             title: "Jane Wlazła",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat lacus non tortor tristique aliquam. Maecenas convallis varius nulla, varius mollis tellus mollis vitae. Suspendisse potenti. Suspendisse suscipit ante a est cursus gravida. Nulla facilisis ornare auctor. Suspendisse a scelerisque purus, vel suscipit eros. Suspendisse viverra tellus vitae ligula venenatis feugiat et a turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat lacus non tortor tristique aliquam. Maecenas convallis varius nulla, varius mollis tellus mollis vitae. Suspendisse potenti. Suspendisse suscipit ante a est cursus gravida. Nulla facilisis ornare auctor. Suspendisse a scelerisque purus, vel suscipit eros. Suspendisse viverra tellus vitae ligula venenatis feugiat et a turpis.",
@@ -17,7 +18,7 @@ const UserPage = () => {
             ],
             textHeight: 5.6
         },
-        stats: {likes: 150, dislikes: 23, comments: 53, dateLabel: "Added", date: "05-10-2024"},
+        stats: {likes: 150, dislikes: 23, comments: 53, dateLabel: "Joined", date: "05-10-2024"},
     }
 
     const art_1 = {
