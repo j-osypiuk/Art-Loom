@@ -11,6 +11,7 @@ const ArtBanner = ({props}) => {
                     <BannerContent props={props.content} />
                 </div>
             </div>
+            {}
             <StatsBanner props={props.stats} />
         </div>
     )

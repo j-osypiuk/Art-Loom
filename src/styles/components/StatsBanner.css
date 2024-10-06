@@ -4,6 +4,8 @@
     justify-content: space-between;
     padding: 1.2rem 2.4rem;
     background-color: var(--clr-secondary-light);
+    border-bottom-right-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
 }
 
 .cmp-stats-banner__stats-container {

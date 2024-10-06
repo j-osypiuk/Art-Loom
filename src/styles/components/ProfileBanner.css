@@ -66,6 +66,11 @@
         border-top-right-radius: 0;
         width: 100%;
     }
+
+    .cpm-profile-banner .cmp-stats-banner {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 }
 
 @media (max-width: 530px) {
