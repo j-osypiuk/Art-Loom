@@ -8,9 +8,15 @@ const TextWrap = ({ props }) => {
     const [showBtn, setShowBtn] = useState(false);
 
     useEffect(() => {
-        const textWrapHeight = textContainerRef.current.scrollHeight;
-        textWrapHeight > props.height * 10 ? setShowBtn(true) : setShowBtn(false);
-    }, [])
+        const handleResize = () => {
+            const textWrapHeight = textContainerRef.current.scrollHeight;
+            textWrapHeight > props.height * 10 ? setShowBtn(true) : setShowBtn(false);
+        }
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     const handleTextExpand = () => {
         const textWrap = textContainerRef.current;
