@@ -1,0 +1,15 @@
+.cmp-user-page__select_wrap {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 2.4rem;
+    background-color: var(--clr-secondary-light);
+    width: 90%;
+    margin: 4.8rem auto 0 auto;
+    padding: 1.6rem 2.4rem;
+}
+
+.cmp-user-page__select_wrap .cmp-user-page__sort-type-select,
+.cmp-user-page__select_wrap .cmp-user-page__art-field-filter-select {
+    margin: 0;
+}

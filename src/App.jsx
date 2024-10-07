@@ -15,6 +15,7 @@ import "./styles/components/ArtBanner.css"
 import "./styles/components/StatsBanner.css"
 import "./styles/components/BannerContent.css"
 import "./styles/components/TextWrap.css"
+import "./styles/pages/UserPage.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";

@@ -147,7 +147,7 @@
   flex-grow: 1;
 }
 
-.artField {
+.artField, .cmp-user-page__sort-type-select, .cmp-user-page__art-field-filter-select{
   background-color: var(--clr-secondary);
   border-bottom: var(--clr-tertiary) solid 2px;
   border-radius: 0.25rem;
@@ -156,6 +156,10 @@
   margin-top: 3rem;
   padding: 0.8rem 0.6rem;
   width: 100%;
+}
+
+.cmp-user-page__sort-type-select, .cmp-user-page__art-field-filter-select {
+  width: 15rem;
 }
 
 @media (max-width: 768px) {
