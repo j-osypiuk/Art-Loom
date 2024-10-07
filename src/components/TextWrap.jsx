@@ -5,27 +5,43 @@ const TextWrap = ({ props }) => {
 
     const textContainerRef = useRef(null);
     const [expanded, setExpanded] = useState(false);
+    const expandedRef = useRef(expanded);
     const [showBtn, setShowBtn] = useState(false);
 
     useEffect(() => {
+        expandedRef.current = expanded;
+    }, [expanded]);
+
+    const expandWrap = (textWrap) => {
+        textWrap.style.height = `${textWrap.scrollHeight / 10}rem`;
+        setExpanded(true);
+    }
+
+    const collapseWrap = (textWrap) => {
+        textWrap.style.height = `${props.height}rem`;
+        setExpanded(false);
+    }
+    
+    useEffect(() => {
         const handleResize = () => {
-            const textWrapHeight = textContainerRef.current.scrollHeight;
-            textWrapHeight > props.height * 10 ? setShowBtn(true) : setShowBtn(false);
+            const textWrap = textContainerRef.current;
+            collapseWrap(textWrap);
+            textWrap.scrollHeight > props.height * 10 ? setShowBtn(true) : setShowBtn(false);
         }
+        handleResize();
 
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+
     const handleTextExpand = () => {
         const textWrap = textContainerRef.current;
         if (!expanded) {
-            textWrap.style.height = `${textWrap.scrollHeight / 10}rem`;
-            setExpanded(true);
+            expandWrap(textWrap);
         } else {
-            textWrap.style.height = `${props.height}rem`;
-            setExpanded(false);
+            collapseWrap(textWrap);
         }
     }
 
