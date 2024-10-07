@@ -2,11 +2,19 @@ import ProfileBanner from "../components/ProfileBanner.jsx";
 import ArtBanner from "../components/ArtBanner.jsx";
 import {Colors} from "../utils/colors.js";
 import {useState} from "react";
+import ProfileForm from "../components/ProfileForm.jsx";
 
 const UserPage = () => {
 
     const [profileData, setProfileData] = useState(
         {
+            userData: {
+                nickname: "janes-art",
+                email: "jane@mail.com",
+                phoneNumber: "444555222",
+                firstName: "Jane",
+                lastName: "Wlazła",
+            },
             thumbnailUrl: "src/assets/profile-photo.jpg",
             content: {
                 title: "Jane Wlazła",
@@ -122,6 +130,7 @@ const UserPage = () => {
     return (
         <div className="cmp-user-page">
             <ProfileBanner props={profileData}/>
+            <ProfileForm props={profileData}/>
             <div className="cmp-user-page__select_wrap">
                 <select value={filterValue} onChange={handleFilterChange} className="cmp-user-page__art-field-filter-select" id="artFieldFilter" name="artFieldFilter">
                     {

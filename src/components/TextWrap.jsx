@@ -21,7 +21,7 @@ const TextWrap = ({ props }) => {
         textWrap.style.height = `${props.height}rem`;
         setExpanded(false);
     }
-    
+
     useEffect(() => {
         const handleResize = () => {
             const textWrap = textContainerRef.current;

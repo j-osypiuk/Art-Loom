@@ -1,5 +1,7 @@
 import "./styles/App.css";
+import "./styles/forms/Forms.css"
 import "./styles/forms/LoginForm.css";
+import "./styles/forms/ProfileForm.css"
 import "./styles/components/FormInput.css"
 import "./styles/components/Header.css"
 import "./styles/components/EventCard.css"
