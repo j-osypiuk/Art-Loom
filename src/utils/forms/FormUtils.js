@@ -1,5 +1,7 @@
 const formatTextInputs = (inputs) => {
-    return inputs.map(input => result[input.name] = input.value);
+    let result = {}
+    inputs.map(input => result[input.name] = input.value);
+    return result;
 }
 
 export { formatTextInputs };

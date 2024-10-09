@@ -1,11 +1,11 @@
-import {useContext, useEffect, useRef} from 'react'
-import {ProfileFormContext} from "../context/forms/ProfileFormContext.jsx";
+import {useEffect, useRef} from 'react'
+import {getActiveContext} from "../context/forms/ActiveFormContextProvider.jsx";
 
 const TextInput = ({index}) => {
 
     const labelRef = useRef(null);
     const inputRef = useRef(null);
-    const {formData, setFormData} = useContext(ProfileFormContext);
+    const {formData, setFormData} = getActiveContext();
 
     useEffect(() => {
         if (formData.textInputs[index].value !== "") {
@@ -13,53 +13,59 @@ const TextInput = ({index}) => {
         }
     }, []);
 
-    // useEffect(() => {
-    //     inputRef.current.classList.toggle("cmp-input__input--error");
-    //     labelRef.current.classList.toggle("cmp-input__label--error");
-    //     labelRef.current.textContent = formData.textInputs[index].isValid ? `${formData.textInputs[index].label}` : `${formData.textInputs[index].label} is required field.`;
-    // }, [formData.textInputs[index].isValid])
-
-    const handleErrorMessage = (isValid, message = "") => {
-        if (isValid) {
-            inputRef.current.classList.remove("cmp-input__input--error");
-            labelRef.current.classList.remove("cmp-input__label--error");
-            labelRef.current.textContent = `${formData.textInputs[index].label}`;
+    useEffect(() => {
+        if (formData.textInputs[index].isValid) {
+            inputRef.current.classList.remove("cmp-text-input__input--error");
+            labelRef.current.classList.remove("cmp-text-input__label--error");
+            labelRef.current.textContent = formData.textInputs[index].label;
         } else {
-            inputRef.current.classList.add("cmp-input__input--error");
-            labelRef.current.classList.add("cmp-input__label--error");
-            labelRef.current.textContent = message;
+            inputRef.current.classList.add("cmp-text-input__input--error");
+            labelRef.current.classList.add("cmp-text-input__label--error");
+            labelRef.current.textContent = formData.textInputs[index].displayErrorMsg;
         }
-    }
+    }, [formData.textInputs[index].isValid, formData.textInputs[index].isRegexValid, formData.textInputs[index].displayErrorMsg, formData.textInputs[index].isValid]);
 
-    const validateInput = (value, regex, errorMessage) => {
-        if (formData.textInputs[index].required) {
+    const validateInput = (label, value, isRequired, regex, regexErrorMsg = "") => {
+        if (isRequired) {
             if(!value) {
                 updateInputProperty("isValid", false);
-                handleErrorMessage(false, `${formData.textInputs[index].label} is required field.`);
+                updateInputProperty("displayErrorMsg", `${label} is required field.`);
             } else {
                 if (regex) {
-                    const isRegexValid = regex.test(value);
-                    updateInputProperty("isValid", isRegexValid);
-                    handleErrorMessage(isRegexValid, errorMessage);
+                    validateRegex(regex,regexErrorMsg, value);
                 } else {
                     updateInputProperty("isValid", true);
-                    handleErrorMessage(true);
                 }
             }
         } else {
-            if (regex && value) {
-                const isRegexValid = regex.test(value);
-                updateInputProperty("isValid", isRegexValid);
-                handleErrorMessage(isRegexValid, errorMessage);
+            if (regex) {
+                validateRegex(regex,regexErrorMsg, value);
             } else {
                 updateInputProperty("isValid", true);
-                handleErrorMessage(true);
             }
+        }
+    }
+
+    const validateRegex = (regex, regexErrorMsg, value) => {
+        if (!regex.test(value)) {
+            updateInputProperty("isValid", false);
+            updateInputProperty("isRegexValid", false);
+            updateInputProperty("displayErrorMsg", regexErrorMsg);
+        } else {
+            updateInputProperty("isValid", true);
+            updateInputProperty("isRegexValid", true);
+            updateInputProperty("isRegexValid", true);
         }
     }
 
     const updateInputValue = (event) => {
-        validateInput(event.target.value, formData.textInputs[index].regex, formData.textInputs[index].errorMessage);
+        validateInput(
+            formData.textInputs[index].label,
+            event.target.value,
+            formData.textInputs[index].required,
+            formData.textInputs[index].regex,
+            formData.textInputs[index].regexErrorMsg
+        );
         updateInputProperty("value", event.target.value);
     }
 
@@ -73,24 +79,24 @@ const TextInput = ({index}) => {
     }
 
     const handleInputFocus = () => {
-        inputRef.current.classList.add("cmp-input__input--focused");
-        labelRef.current.classList.add("cmp-input__label--focused");
+        inputRef.current.classList.add("cmp-text-input__input--focused");
+        labelRef.current.classList.add("cmp-text-input__label--focused");
     };
 
     const handleInputBlur = () => {
         if (formData.textInputs[index].value === "") {
-            inputRef.current.classList.remove("cmp-input__input--focused");
-            labelRef.current.classList.remove("cmp-input__label--focused");
+            inputRef.current.classList.remove("cmp-text-input__input--focused");
+            labelRef.current.classList.remove("cmp-text-input__label--focused");
         }
     }
 
     return (
-        <div className="cmp-input">
+        <div className="cmp-text-input">
             <label
                 ref={labelRef}
                 htmlFor={`${formData.textInputs[index].name}-input`}
                 id={`${formData.textInputs[index].name}-label`}
-                className="cmp-input__label"
+                className="cmp-text-input__label"
             >
                 {formData.textInputs[index].label}
             </label>
@@ -103,7 +109,7 @@ const TextInput = ({index}) => {
                 type={formData.textInputs[index].type}
                 name={formData.textInputs[index].name}
                 id={`${formData.textInputs[index].name}-input`}
-                className="cmp-input__input"
+                className="cmp-text-input__input"
             />
         </div>
     )
