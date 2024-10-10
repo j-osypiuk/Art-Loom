@@ -1,0 +1,30 @@
+.cmp-slider {
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(3px);
+    opacity: 1;
+}
+
+.cmp-slider--hidden {
+    opacity: 0;
+    right: -100rem;
+}
+
+.cmp-slider__content-wrap {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    transition: right 0.3s ease-in-out;
+}
+
+.cmp-slider__content-wrap--hidden {
+    right: -100rem;
+}
+

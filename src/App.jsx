@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import "./styles/forms/Forms.css"
+import "./styles/components/ModalSlide.css"
 import "./styles/forms/LoginForm.css";
 import "./styles/forms/ProfileForm.css"
 import "./styles/components/FormInput.css"

@@ -1,16 +1,23 @@
-import profilePhoto from "../assets/profile-photo.jpg"
 import {CiSettings} from "react-icons/ci";
 import StatsBanner from "./StatsBanner.jsx";
 import BannerContent from "./BannerContent.jsx";
+import {useState} from "react";
+import ModalSlide from "./ModalSlide.jsx";
+import ProfileForm from "./ProfileForm.jsx";
 
 const ProfileBanner = ({props}) => {
 
+    const [showProfileForm, setShowProfileForm] = useState(false);
+
     return (
         <div className="cpm-profile-banner">
+            <ModalSlide props={{showProfileForm, setShowProfileForm}}><ProfileForm props={{userData: props.userData, content: props.content, setShowProfileForm: setShowProfileForm}}/></ModalSlide>
             <div className="cpm-profile-banner__top-container">
                 <div className="cpm-profile-banner__photo-wrap">
                     <img src={props.thumbnailUrl} alt="User profile photo" className="cpm-profile-banner__photo"/>
-                    <button className="cmp-profile-banner__settings-btn" type="button">
+                    <button onClick={() => setShowProfileForm(true)}
+                            className="cmp-profile-banner__settings-btn"
+                            type="button">
                         <CiSettings/>
                     </button>
                 </div>

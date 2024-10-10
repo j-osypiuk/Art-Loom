@@ -67,6 +67,7 @@ const ProfileForm = ({props}) => {
         };
 
         console.log(responseObj);
+        props.setShowProfileForm(false);
     }
 
     return (
