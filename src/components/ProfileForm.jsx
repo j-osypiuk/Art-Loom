@@ -2,13 +2,19 @@ import {useState} from "react";
 import {ProfileFormContext} from "../context/forms/ProfileFormContext.jsx";
 import TextInput from "./TextInput.jsx";
 import {formatTextInputs} from "../utils/forms/FormUtils.js"
+import SelectInput from "./SelectInput.jsx";
 
 const ProfileForm = ({props}) => {
 
     const [formData, setFormData] = useState(
         {
             showNick: false,
-            artFields: props.content.tags.map(tag => tag.name),
+            artFields: {
+                label: "Art Fields",
+                options: props.content.tags.map(tag => tag.name),
+                required: false,
+                displayErrorMsg: "Art Fields is required field.",
+            },
             description: props.content.description,
             textInputs: [
                 {
@@ -72,9 +78,10 @@ const ProfileForm = ({props}) => {
 
     return (
         <div className="cmp-profile-form">
-            <ProfileFormContext.Provider value={{formData, setFormData}}>
+            <ProfileFormContext.Provider value={{formData, setFormData, options: formData.artFields}}>
                 <h1>Profile form</h1>
                 <form method="post" className="cmp-login__form" autoComplete="off">
+                    <SelectInput optionsName="artFields" required={true}/>
                     {
                         formData.textInputs.map((inputData, index) => <TextInput key={index} index={index}/>)
                     }

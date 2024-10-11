@@ -1,0 +1,113 @@
+.cmp-select-input {
+    font-size: 1.6rem;
+    margin-top: 3.2rem;
+    position: relative;
+    z-index: 999;
+}
+
+.cmp-select-input__label {
+    color: var(--clr-tertiary);
+    position: absolute;
+    text-wrap: nowrap;
+    top: 50%;
+    transform: translate(0.6rem, -50%);
+    transition: var(--transition-default);
+}
+
+.cmp-select-input__label--focused {
+    font-size: 1.4rem;
+    transform: translate(0.1rem, -225%);
+}
+
+.cmp-select-input__label--error {
+    color: var(--clr-red-dark);
+}
+
+.cmp-select-input__input {
+    background-color: var(--clr-secondary);
+    border-bottom: var(--clr-tertiary) solid 2px;
+    border-radius: 0.25rem;
+    color: inherit;
+    padding: 0.8rem 0.6rem;
+    transition: var(--transition-default);
+    width: 100%;
+    caret-color: transparent;
+}
+
+.cmp-select-input__input--focused {
+    background-color: rgba(21, 128, 61, 0.15);
+    border-bottom: var(--clr-green-dark) solid 2px;
+}
+
+.cmp-select-input__input--error {
+    background-color: rgba(185, 28, 28, 0.15);
+    border-bottom: var(--clr-red-dark) solid 2px;
+}
+
+.cmp-select-input__option-wrap {
+    position: absolute;
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    width: 100%;
+    transition: grid-template-rows 0.3s ease-out;
+}
+
+.cmp-select-input__option-wrap--expanded {
+    grid-template-rows: 1fr;
+}
+
+.cmp-select-input__option-list {
+    overflow: hidden;
+    display: block;
+    margin-top: 0.4rem;
+    list-style: none;
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+}
+
+.cmp-select-input__option {
+    color: var(--clr-tertiary);
+    border-radius: 0.25rem;
+    padding: 0.8rem 0.6rem;
+    margin-bottom: 0.4rem;
+    border: 2px solid var(--clr-tertiary);
+    transition: background-color 0.3s;
+}
+
+.cmp-select-input__option:hover {
+    background-color: var(--clr-green);
+    cursor: pointer;
+    border: 2px solid var(--clr-green);
+    color: #fff;
+}
+
+.cmp-select-input__option--selected {
+    background-color: rgba(21, 128, 61, 0.15);
+    border: 2px solid var(--clr-green);
+    color: #fff;
+}
+
+.cmp-select-input__caret {
+    position: absolute;
+    top: 40%;
+    right: 0.8rem;
+    width: 0;
+    height: 0;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-top: 0.8rem solid var(--clr-tertiary);
+    transition: var(--transition-default);
+}
+
+.cmp-select-input__caret--focused {
+    border-top: 0.8rem solid #fff;
+}
+
+.cmp-select-input__caret--error {
+    border-top: 0.8rem solid var(--clr-red-dark);
+}
+
+.cmp-select-input__caret--rotated {
+    transform: rotate(180deg);
+}

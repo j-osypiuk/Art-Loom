@@ -10,7 +10,7 @@ const UserPage = () => {
             userData: {
                 nickname: "janes-art",
                 email: "jane@mail.com",
-                phoneNumber: "444555222",
+                phoneNumber: "",
                 firstName: "Jane",
                 lastName: "Wlazła",
             },
@@ -24,6 +24,7 @@ const UserPage = () => {
                     {name: "CINEMA", bgColor: Colors.RED_DARK},
                     {name: "PAINTING", bgColor: Colors.YELLOW_DARK},
                     {name: "DRAWING", bgColor: Colors.BLUE_DARK},
+                    {name: "DANCE", bgColor: Colors.BLUE_DARK},
                 ],
                 textHeight: 5.6
             },
