@@ -12,8 +12,18 @@ const ModalSlide = ({children, props}) => {
             }
         }
 
+        const handleMouseClick = (event) => {
+            if (event.target.classList.contains("cmp-slider")) {
+                props.setShowProfileForm(false);
+            }
+        }
+
         window.addEventListener("keydown", handleKeyPress);
-        return () => {window.removeEventListener("keydown", handleKeyPress);}
+        window.addEventListener("click", handleMouseClick);
+        return () => {
+            window.removeEventListener("keydown", handleKeyPress);
+            window.removeEventListener("click", handleMouseClick);
+        }
     }, []);
 
     return (
