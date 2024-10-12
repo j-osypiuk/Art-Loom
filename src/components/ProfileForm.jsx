@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {ProfileFormContext} from "../context/forms/ProfileFormContext.jsx";
 import TextInput from "./TextInput.jsx";
 import {formatTextInputs} from "../utils/forms/FormUtils.js"
@@ -68,7 +68,7 @@ const ProfileForm = ({props}) => {
                     type: "email",
                     value: props.userData.email,
                     isValid: true,
-                    required: true,
+                    required: false,
                     regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                     isRegexValid: true,
                     displayErrorMsg: "Email is required field.",
@@ -80,7 +80,7 @@ const ProfileForm = ({props}) => {
                     type: "email",
                     value: props.userData.email,
                     isValid: true,
-                    required: true,
+                    required: false,
                     regex: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
                     isRegexValid: true,
                     displayErrorMsg: "Last Name is required field.",
@@ -92,7 +92,7 @@ const ProfileForm = ({props}) => {
                     type: "password",
                     value: "",
                     isValid: true,
-                    required: true,
+                    required: false,
                     regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                     isRegexValid: true,
                     displayErrorMsg: "Password is required field.",
@@ -104,7 +104,7 @@ const ProfileForm = ({props}) => {
                     type: "password",
                     value: "",
                     isValid: true,
-                    required: true,
+                    required: false,
                     regex: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
                     isRegexValid: true,
                     displayErrorMsg: "Confirm Password is required field.",
@@ -113,6 +113,47 @@ const ProfileForm = ({props}) => {
             ]
         }
     )
+
+    // Validate email match
+    useEffect(() => {
+        if (formData.textInputs[4].value && formData.textInputs[4].isRegexValid &&
+            formData.textInputs[5].value && formData.textInputs[5].isRegexValid) {
+            if (formData.textInputs[4].value !== formData.textInputs[5].value) {
+                updateFormData("email", "isValid", false);
+                updateFormData("email", "displayErrorMsg", "Mails do not match.");
+                updateFormData("confirmEmail", "isValid", false);
+                updateFormData("confirmEmail", "displayErrorMsg", "Mails do not match.");
+            } else {
+                updateFormData("email", "isValid", true);
+                updateFormData("confirmEmail", "isValid", true);
+            }
+        }
+    }, [formData.textInputs[4].value, formData.textInputs[5].value]);
+
+    // Validate password match
+    useEffect(() => {
+        if (formData.textInputs[6].value && formData.textInputs[6].isRegexValid &&
+            formData.textInputs[7].value && formData.textInputs[7].isRegexValid) {
+            if (formData.textInputs[6].value !== formData.textInputs[7].value) {
+                updateFormData("newPassword", "isValid", false);
+                updateFormData("newPassword", "displayErrorMsg", "Passwords do not match.");
+                updateFormData("confirmPassword", "isValid", false);
+                updateFormData("confirmPassword", "displayErrorMsg", "Passwords do not match.");
+            } else {
+                updateFormData("newPassword", "isValid", true);
+                updateFormData("confirmPassword", "isValid", true);
+            }
+        }
+    }, [formData.textInputs[6].value, formData.textInputs[7].value]);
+
+    const updateFormData = (inputName, propertyName, propertyValue)  => {
+        setFormData(prevData => ({
+            ...prevData,
+            textInputs: prevData.textInputs.map((input) =>
+                input.name === inputName ? {...input, [propertyName]: propertyValue} : input
+            )
+        }));
+    }
 
     const handleFormSubmit = (event) => {
         event.preventDefault();

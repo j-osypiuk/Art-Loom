@@ -23,7 +23,7 @@ const TextInput = ({index}) => {
             labelRef.current.classList.add("cmp-text-input__label--error");
             labelRef.current.textContent = formData.textInputs[index].displayErrorMsg;
         }
-    }, [formData.textInputs[index].isValid, formData.textInputs[index].isRegexValid, formData.textInputs[index].displayErrorMsg, formData.textInputs[index].isValid]);
+    }, [formData.textInputs[index].isValid, formData.textInputs[index].isRegexValid, formData.textInputs[index].displayErrorMsg]);
 
     const validateInput = (label, value, isRequired, regex, regexErrorMsg = "") => {
         if (isRequired) {
