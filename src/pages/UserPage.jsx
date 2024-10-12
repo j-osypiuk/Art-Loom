@@ -1,7 +1,10 @@
 import ProfileBanner from "../components/ProfileBanner.jsx";
 import ArtBanner from "../components/ArtBanner.jsx";
 import {Colors} from "../utils/colors.js";
-import {useState} from "react";
+import React, {useState} from "react";
+import TabsExample from "../components/Tabs.jsx";
+import Tabs from "../components/Tabs.jsx";
+import TabPanel from "../components/TabPanel.jsx";
 
 const UserPage = () => {
 
@@ -130,21 +133,33 @@ const UserPage = () => {
     return (
         <div className="cmp-user-page">
             <ProfileBanner props={profileData}/>
-            <div className="cmp-user-page__select_wrap">
-                <select value={filterValue} onChange={handleFilterChange} className="cmp-user-page__art-field-filter-select" id="artFieldFilter" name="artFieldFilter">
-                    {
-                        profileData.content.tags.map(tag => <option key={tag.name} value={tag.name}>{tag.name}</option>)
-                    }
-                </select>
-                <select value={sortType} onChange={handleSortChange} className="cmp-user-page__sort-type-select" id="sortType" name="sortType">
-                    <option value="newest">Newest</option>
-                    <option value="oldest">Oldest</option>
-                    <option value="mostPopular">Most Popular</option>
-                </select>
+            <div className="cmp-user-page__content-wrap">
+                <Tabs fontSize="2.4rem" minWidth="20rem">
+                    <TabPanel label="Portfolio">
+                        <div className="cmp-user-page__select_wrap">
+                            <select value={filterValue} onChange={handleFilterChange} className="cmp-user-page__art-field-filter-select" id="artFieldFilter" name="artFieldFilter">
+                                {
+                                    profileData.content.tags.map(tag => <option key={tag.name} value={tag.name}>{tag.name}</option>)
+                                }
+                            </select>
+                            <select value={sortType} onChange={handleSortChange} className="cmp-user-page__sort-type-select" id="sortType" name="sortType">
+                                <option value="newest">Newest</option>
+                                <option value="oldest">Oldest</option>
+                                <option value="mostPopular">Most Popular</option>
+                            </select>
+                        </div>
+                        {
+                            displayedArtworks.map(artwork => <ArtBanner key={artwork.id} props={artwork}/>)
+                        }
+                    </TabPanel>
+                    <TabPanel label="Events">
+                        <h2>This is events panel</h2>
+                    </TabPanel>
+                    <TabPanel label="Tab 3">
+                        <h2>Content for Tab 3</h2>
+                    </TabPanel>
+                </Tabs>
             </div>
-            {
-                displayedArtworks.map(artwork => <ArtBanner key={artwork.id} props={artwork}/>)
-            }
         </div>
     );
 }

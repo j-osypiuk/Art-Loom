@@ -20,6 +20,7 @@ import "./styles/components/BannerContent.css"
 import "./styles/components/TextWrap.css"
 import "./styles/pages/UserPage.css"
 import "./styles/components/SelectInput.css"
+import "./styles/components/Tabs.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";

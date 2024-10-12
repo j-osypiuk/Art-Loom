@@ -1,8 +1,11 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import {ProfileFormContext} from "../context/forms/ProfileFormContext.jsx";
 import TextInput from "./TextInput.jsx";
 import {formatTextInputs} from "../utils/forms/FormUtils.js"
 import SelectInput from "./SelectInput.jsx";
+import TabPanel from "./TabPanel.jsx";
+import ArtBanner from "./ArtBanner.jsx";
+import Tabs from "./Tabs.jsx";
 
 const ProfileForm = ({props}) => {
 
@@ -81,15 +84,25 @@ const ProfileForm = ({props}) => {
             <ProfileFormContext.Provider value={{formData, setFormData, options: formData.artFields}}>
                 <h1>Profile form</h1>
                 <form method="post" className="cmp-login__form" autoComplete="off">
-                    <SelectInput optionsName="artFields" required={true}/>
-                    {
-                        formData.textInputs.map((inputData, index) => <TextInput key={index} index={index}/>)
-                    }
-                    <div className="cmp-profile-form__btn-wrap">
-                        <button type="submit" className="cmp-profile-form__button" onClick={handleFormSubmit}>
-                            Save
-                        </button>
-                    </div>
+                    <Tabs>
+                        <TabPanel label="Personal Data">
+                            <SelectInput optionsName="artFields" required={true}/>
+                            {
+                                formData.textInputs.map((inputData, index) => <TextInput key={index} index={index}/>)
+                            }
+                            <div className="cmp-profile-form__btn-wrap">
+                                <button type="submit" className="cmp-profile-form__button" onClick={handleFormSubmit}>
+                                    Save
+                                </button>
+                            </div>
+                        </TabPanel>
+                        <TabPanel label="Photos">
+                            <h2>This is events panel</h2>
+                        </TabPanel>
+                        <TabPanel label="ETC.">
+                            <h2>Content for Tab 3</h2>
+                        </TabPanel>
+                    </Tabs>
                 </form>
             </ProfileFormContext.Provider>
         </div>
