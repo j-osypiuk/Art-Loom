@@ -38,6 +38,6 @@
     transform: translate(0.1rem, -225%);
 }
 
-.cmp-text-input__label--error {
+.cmp-text-input__label--error, .cmp-textarea__label--error {
     color: var(--clr-red-dark);
 }

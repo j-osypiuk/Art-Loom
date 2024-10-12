@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import TabsExample from "../components/Tabs.jsx";
 import Tabs from "../components/Tabs.jsx";
 import TabPanel from "../components/TabPanel.jsx";
+import Textarea from "../components/Textarea.jsx";
 
 const UserPage = () => {
 
@@ -20,7 +21,7 @@ const UserPage = () => {
             thumbnailUrl: "src/assets/profile-photo.jpg",
             content: {
                 title: "Jane Wlazła",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat lacus non tortor tristique aliquam. Maecenas convallis varius nulla, varius mollis tellus mollis vitae. Suspendisse potenti. Suspendisse suscipit ante a est cursus gravida. Nulla facilisis ornare auctor. Suspendisse a scelerisque purus, vel suscipit eros. Suspendisse viverra tellus vitae ligula venenatis feugiat et a turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consequat lacus non tortor tristique aliquam. Maecenas convallis varius nulla, varius mollis tellus mollis vitae. Suspendisse potenti. Suspendisse suscipit ante a est cursus gravida. Nulla facilisis ornare auctor. Suspendisse a scelerisque purus, vel suscipit eros. Suspendisse viverra tellus vitae ligula venenatis feugiat et a turpis.",
+                description: "sdacadscasdc",
                 tags: [
                     {name: "SCULPTURE", bgColor: Colors.GREEN_DARK},
                     {name: "MUSIC", bgColor: Colors.PURPLE_DARK},

@@ -1,0 +1,45 @@
+.cmp-textarea__input {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.cmp-textarea__textarea {
+    max-width: 100%;
+    min-width: 100%;
+    resize: none;
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: inherit;
+    padding: 0.6rem;
+    background-color: var(--clr-secondary-dark);
+    transition: background-color 0.3s;
+}
+
+.cmp-textarea__textarea--focused {
+    background-color: rgba(21, 128, 61, 0.15);
+    border: var(--clr-green-dark) solid 2px;
+}
+
+.cmp-textarea__textarea--error {
+    background-color: rgba(185, 28, 28, 0.15);
+    border: var(--clr-red-dark) solid 2px;
+}
+
+.cmp-textarea__label {
+    color: var(--clr-tertiary);
+    position: absolute;
+    text-wrap: nowrap;
+    z-index: 999;
+    font-size: 1.6rem;
+    transform: translate(0.6rem, 25%);
+    transition: var(--transition-default);
+}
+
+.cmp-textarea__label--focused {
+    font-size: 1.4rem;
+    transform: translate(0.1rem, -125%);
+}
+
+.cmp-textarea__label--error {
+    color: var(--clr-red-dark);
+}

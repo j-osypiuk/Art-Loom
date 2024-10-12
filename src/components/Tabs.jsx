@@ -6,7 +6,7 @@ const Tabs = ({ children, fontSize, minWidth }) => {
 
     useEffect(() => {
         const activeBtn = document.querySelector(".cmp-tabs__tab-btn--active");
-        lineRef.current.style.width = activeBtn.offsetWidth + 'px';
+        lineRef.current.style.width = minWidth;
     }, []);
 
     const handleTabClick = (index, event) => {
