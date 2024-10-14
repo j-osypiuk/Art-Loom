@@ -164,7 +164,9 @@ const ProfileForm = ({props}) => {
         event.preventDefault();
         let responseObj = {
             showNick: formData.showNick,
-            artFields: formData.artFields,
+            profileImg: formData.profileImg,
+            profileBackgroundImg: formData.profileBackgroundImg,
+            artFields: formData.artFields.options,
             description: formData.description.value,
             ...formatTextInputs(formData.textInputs)
         };

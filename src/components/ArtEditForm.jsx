@@ -43,7 +43,7 @@ const ArtEditForm = ({props}) => {
         event.preventDefault();
         let responseObj = {
             artThumbnailImg: formData.artThumbnailImg,
-            artFields: formData.artFields,
+            artFields: formData.artFields.options,
             description: formData.description.value,
             ...formatTextInputs(formData.textInputs)
         };
