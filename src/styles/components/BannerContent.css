@@ -6,7 +6,15 @@
     font-size: 3rem;
     font-weight: 600;
     letter-spacing: 1px;
+    margin-right: 10rem;
     color: var(--clr-gray-200);
+}
+
+@media (max-width: 680px) {
+
+    .cpm-banner-content__title {
+        margin-right: 0;
+    }
 }
 
 @media (max-width: 530px) {

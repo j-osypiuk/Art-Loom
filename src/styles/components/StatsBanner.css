@@ -51,14 +51,14 @@
     .cmp-stats-banner__date-wrap {
         position: absolute;
         top: 0;
-        left: 0;
+        right: 0;
         background-color: var(--clr-secondary-dark);
-        border-bottom-left-radius: 0;
-        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 0;
     }
 
     .cmp-stats-banner__date-date {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
         font-weight: 600;
     }
 }
