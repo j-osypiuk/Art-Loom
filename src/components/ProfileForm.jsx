@@ -6,12 +6,17 @@ import SelectInput from "./SelectInput.jsx";
 import TabPanel from "./TabPanel.jsx";
 import Tabs from "./Tabs.jsx";
 import Textarea from "./Textarea.jsx";
+import FileUpload from "./FileUpload.jsx";
+import {FileUploadType} from "../utils/FileUploadType.js"
+
 
 const ProfileForm = ({props}) => {
 
     const [formData, setFormData] = useState(
         {
             showNick: false,
+            profileImg: "",
+            profileBackgroundImg: "",
             artFields: {
                 label: "Art Fields",
                 options: props.content.tags.map(tag => tag.name),
@@ -180,10 +185,11 @@ const ProfileForm = ({props}) => {
                             <SelectInput optionsName="artFields" required={true}/>
                         </TabPanel>
                         <TabPanel label="Description">
-                            <Textarea name="description" rows={20}/>
+                            <Textarea name="description" rows={19}/>
                         </TabPanel>
                         <TabPanel label="Photos">
-                            <h2>This is events panel</h2>
+                            <FileUpload type={FileUploadType.PROFILE_IMAGE}/>
+                            <FileUpload type={FileUploadType.PROFILE_BACKGROUND_IMAGE}/>
                         </TabPanel>
                         <TabPanel label="Credentials">
                             {

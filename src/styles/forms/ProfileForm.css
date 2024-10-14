@@ -1,16 +1,19 @@
 .cmp-profile-form {
     background-color: var(--clr-secondary);
-    padding: 3.2rem;
-    width: 70rem;
-    height: 60rem;
     border-radius: 0.4rem;
     overflow: scroll;
-    position: relative;
+}
+
+.cmp-profile-form__form {
+    padding: 3.2rem 3.2rem 0 3.2rem;
+    width: 70rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cmp-profile-form__btn-wrap {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 3.2rem;
+    padding-bottom: 3.2rem;
 }
+
