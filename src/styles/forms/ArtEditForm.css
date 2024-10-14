@@ -1,0 +1,18 @@
+.cmp-art-edit-form {
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+    overflow: scroll;
+}
+
+.cmp-art-edit-form__form {
+    padding: 3.2rem 3.2rem 0 3.2rem;
+    width: 70rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cmp-art-edit-form__btn-wrap {
+    padding-bottom: 3.2rem;
+}

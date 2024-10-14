@@ -1,6 +1,7 @@
 /* SUBMIT BUTTON CONTAINER*/
 .cmp-login__btn-wrap,
-.cmp-profile-form__btn-wrap {
+.cmp-profile-form__btn-wrap,
+.cmp-art-edit-form__btn-wrap {
     display: flex;
     justify-content: center;
     margin-top: 3.6rem;
@@ -9,7 +10,8 @@
 
 /* SUBMIT BUTTON */
 .cmp-login__button,
-.cmp-profile-form__button {
+.cmp-profile-form__button,
+.cmp-art-edit-form__button {
     background-color: var(--clr-green);
     border: none;
     border-radius: 0.5rem;
@@ -23,6 +25,7 @@
 }
 
 .cmp-login__button:hover,
-.cmp-profile-form__button:hover {
+.cmp-profile-form__button:hover,
+.cmp-art-edit-form__button:hover {
     background-color: var(--clr-green-dark);
 }

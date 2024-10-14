@@ -23,6 +23,7 @@ import "./styles/components/SelectInput.css"
 import "./styles/components/Tabs.css"
 import "./styles/components/Textarea.css"
 import "./styles/components/FileUpload.css"
+import "./styles/forms/ArtEditForm.css"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
