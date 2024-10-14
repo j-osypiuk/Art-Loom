@@ -11,7 +11,9 @@ const ProfileBanner = ({props}) => {
 
     return (
         <div className="cpm-profile-banner">
-            <ModalSlide props={{showProfileForm, setShowProfileForm}}><ProfileForm props={{userData: props.userData, content: props.content, setShowProfileForm: setShowProfileForm}}/></ModalSlide>
+            <ModalSlide props={{showSlide: showProfileForm, setShowSlide: setShowProfileForm}}>
+                <ProfileForm props={{userData: props.userData, content: props.content, setShowProfileForm: setShowProfileForm}}/>
+            </ModalSlide>
             <div className="cpm-profile-banner__top-container">
                 <div className="cpm-profile-banner__photo-wrap">
                     <img src={props.thumbnailUrl} alt="User profile photo" className="cpm-profile-banner__photo"/>

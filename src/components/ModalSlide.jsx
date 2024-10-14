@@ -8,13 +8,13 @@ const ModalSlide = ({children, props}) => {
     useEffect(() => {
         const handleKeyPress = (event) => {
             if (event.code === "Escape") {
-                props.setShowProfileForm(false);
+                props.setShowSlide(false);
             }
         }
 
         const handleMouseClick = (event) => {
             if (event.target.classList.contains("cmp-slider")) {
-                props.setShowProfileForm(false);
+                props.setShowSlide(false);
             }
         }
 
@@ -27,10 +27,10 @@ const ModalSlide = ({children, props}) => {
     }, []);
 
     return (
-        <div style={{transition: `${props.showProfileForm ? inBlurTransition : outBlurTransition}`}}
-             className={`cmp-slider ${props.showProfileForm ? "" : "cmp-slider--hidden"}`}
+        <div style={{transition: `${props.showSlide ? inBlurTransition : outBlurTransition}`}}
+             className={`cmp-slider ${props.showSlide ? "" : "cmp-slider--hidden"}`}
         >
-            <div className={`cmp-slider__content-wrap  ${props.showProfileForm ? "" : "cmp-slider__content-wrap--hidden"}`}>
+            <div className={`cmp-slider__content-wrap  ${props.showSlide ? "" : "cmp-slider__content-wrap--hidden"}`}>
                 {children}
             </div>
         </div>
