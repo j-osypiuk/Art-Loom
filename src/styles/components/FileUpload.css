@@ -1,0 +1,106 @@
+.cmp-file-upload {
+    margin-top: 1.6rem;
+}
+
+.cmp-file-upload__input-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-secondary-light);
+    border-radius: 0.4rem;
+    padding: 3.2rem 0 1.6rem 0;
+    border: 0.3rem dashed var(--clr-tertiary);
+}
+
+.cmp-file-upload__file-input {
+    display: none;
+}
+
+.cmp-file-upload__icon {
+    width: 8rem;
+    height: 8rem;
+    fill: var(--clr-tertiary);
+}
+
+.cmp-file-upload__browse-btn {
+    background-color: var(--clr-tertiary);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.4rem;
+    justify-self: center;
+    letter-spacing: 1.4px;
+    padding: 0.4rem 0.8rem;
+    transition: var(--transition-default);
+}
+
+.cmp-file-upload__browse-btn:hover {
+    background-color: var(--clr-green-dark);
+}
+
+.cmp-file-upload__img-preview--profile-photo {
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.cmp-file-upload__img-preview--profile-background {
+    width: 50rem;
+    height: 28.125rem;
+    object-fit: cover;
+}
+
+.cmp-file-upload__img-preview--art-thumbnail {
+    width: 30rem;
+    height: 40rem;
+    object-fit: cover;
+}
+
+.cmp-file-upload__preview-wrap,
+.cmp-file-upload__icon-wrap,
+.cmp-file-upload__btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cmp-file-upload__btn-wrap {
+    margin-top: 1.6rem;
+}
+
+.cmp-file-upload__content-wrap {
+    position: relative;
+}
+
+.cmp-file-upload__delete-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    transform: translate(50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: var(--clr-tertiary);
+    background-color: var(--clr-secondary);
+    font-size: 3rem;
+    transition: var(--transition-default);
+}
+
+.cmp-file-upload__delete-btn:hover {
+    color: var(--clr-red);
+    background-color: var(--clr-tertiary);
+    cursor: pointer;
+}
+
+.cmp-file-upload__label {
+    display: inline-block;
+    color: var(--clr-tertiary);
+    font-size: 1.4rem;
+    text-wrap: nowrap;
+    margin-bottom: 0.4rem;
+}

@@ -1,0 +1,32 @@
+.cpm-banner-content__tag-container {
+    margin-top: 1.2rem;
+}
+
+.cpm-banner-content__title {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 10rem;
+    color: var(--clr-gray-200);
+}
+
+@media (max-width: 680px) {
+
+    .cpm-banner-content__title {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 530px) {
+
+    .cpm-banner-content__title {
+        text-align: center;
+    }
+
+    .cpm-banner-content__tag-container {
+        justify-content: center;
+        margin-top: 0.8rem;
+        margin-bottom: 1.6rem;
+    }
+
+}

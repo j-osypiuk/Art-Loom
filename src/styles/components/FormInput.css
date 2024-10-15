@@ -1,10 +1,10 @@
-.cmp-input {
+.cmp-text-input {
     font-size: 1.6rem;
     margin-top: 3.2rem;
     position: relative;
 }
 
-.cmp-input__input {
+.cmp-text-input__input {
     background-color: var(--clr-secondary);
     border-bottom: var(--clr-tertiary) solid 2px;
     border-radius: 0.25rem;
@@ -14,29 +14,30 @@
     width: 100%;
 }
 
-.cmp-input__input--focused {
+.cmp-text-input__input--focused {
     background-color: rgba(21, 128, 61, 0.15);
     border-bottom: var(--clr-green-dark) solid 2px;
 }
 
-.cmp-input__input--error {
+.cmp-text-input__input--error {
     background-color: rgba(185, 28, 28, 0.15);
     border-bottom: var(--clr-red-dark) solid 2px;
 }
 
-.cmp-input__label {
+.cmp-text-input__label {
     color: var(--clr-tertiary);
     position: absolute;
+    text-wrap: nowrap;
     top: 50%;
     transform: translate(0.6rem, -50%);
     transition: var(--transition-default);
 }
 
-.cmp-input__label--focused {
+.cmp-text-input__label--focused {
     font-size: 1.4rem;
     transform: translate(0.1rem, -225%);
 }
 
-.cmp-input__label--error {
+.cmp-text-input__label--error, .cmp-textarea__label--error {
     color: var(--clr-red-dark);
 }

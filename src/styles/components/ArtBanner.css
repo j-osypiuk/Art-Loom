@@ -1,0 +1,124 @@
+.cmp-art-banner {
+    position: relative;
+    margin: 4rem auto;
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+    transition: var(--transition-default);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cmp-art-banner__button-wrap {
+    position: absolute;
+    right: 2.4rem;
+    top: 2.4rem;
+    display: flex;
+    width: 10rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cmp-art-banner__delete-btn,
+.cmp-art-banner__edit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0.8rem;
+    color: var(--clr-tertiary);
+    background-color: var(--clr-secondary);
+    font-size: 3rem;
+    transition: var(--transition-default);
+}
+
+.cmp-art-banner__delete-btn:hover {
+    color: var(--clr-red);
+    background-color: var(--clr-tertiary);
+    cursor: pointer;
+}
+
+.cmp-art-banner__edit-btn:hover {
+    color: var(--clr-gray-200);
+    background-color: var(--clr-tertiary);
+    cursor: pointer;
+}
+
+.cmp-art-banner:hover, .cmp-art-banner:focus {
+    cursor: pointer;
+    filter: brightness(0.85);
+    box-shadow: 0 1.5rem 2rem 0 rgba(0, 0, 0, 0.5);
+}
+
+.cmp-art-banner__top-container {
+    display: flex;
+    gap: 2.4rem;
+}
+
+.cmp-art-banner__thumbnail {
+    width: 30rem;
+    height: 40rem;
+    border-top-left-radius: 0.4rem;
+    align-self: start;
+}
+
+.cmp-art-banner__content-wrap {
+    padding: 2.4rem 2.4rem 1.2rem 0;
+}
+
+@media (max-width: 680px) {
+
+    .cmp-art-banner__button-wrap {
+        top: 0;
+        left: 0;
+        padding: 1.2rem;
+        right: auto;
+        width: auto;
+        gap: 1.2rem;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+        border-top-left-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+    }
+
+    .cmp-art-banner__delete-btn,
+    .cmp-art-banner__edit-btn {
+        color: var(--clr-gray-400);
+        background-color: var(--clr-secondary-light);
+    }
+}
+
+@media (max-width: 530px) {
+
+    .cmp-art-banner__delete-btn,
+    .cmp-art-banner__edit-btn {
+        width: 5rem;
+        height: 5rem;
+        font-size: 4rem;
+    }
+
+    .cmp-art-banner__top-container {
+        display: block;
+        position: relative;
+    }
+
+    .cmp-art-banner__content-wrap {
+        padding: 1.2rem;
+        position: absolute;
+        transform: translateY(-100%);
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(2px);
+    }
+
+    .cmp-art-banner__content-wrap .cmp-text-wrap {
+        display: none;
+    }
+
+    .cmp-art-banner__thumbnail {
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 0.4rem;
+        border-top-left-radius: 0.5rem;
+    }
+}

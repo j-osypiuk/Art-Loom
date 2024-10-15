@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  min-height: 100dvh;
+  min-height: 92dvh;
   width: 100%;
 }
 
@@ -81,30 +81,6 @@
   width: 37.5%;
 }
 
-.cmp-login__btn-wrap {
-  display: flex;
-  justify-content: center;
-  margin-top: 3.6rem;
-  transition: var(--transition-default);
-}
-
-.cmp-login__button {
-  background-color: var(--clr-green);
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  color: #fff;
-  font-size: 2rem;
-  justify-self: center;
-  letter-spacing: 1.4px;
-  padding: 0.8rem 1.6rem;
-  transition: var(--transition-default);
-}
-
-.cmp-login__button:hover {
-  background-color: var(--clr-green-dark);
-}
-
 .cmp-login__header {
   font-size: 3.6rem;
   letter-spacing: 1.2px;
@@ -147,7 +123,7 @@
   flex-grow: 1;
 }
 
-.artField {
+.artField, .cmp-user-page__sort-type-select, .cmp-user-page__art-field-filter-select{
   background-color: var(--clr-secondary);
   border-bottom: var(--clr-tertiary) solid 2px;
   border-radius: 0.25rem;
@@ -156,6 +132,10 @@
   margin-top: 3rem;
   padding: 0.8rem 0.6rem;
   width: 100%;
+}
+
+.cmp-user-page__sort-type-select, .cmp-user-page__art-field-filter-select {
+  width: 15rem;
 }
 
 @media (max-width: 768px) {

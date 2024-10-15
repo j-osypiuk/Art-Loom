@@ -1,0 +1,32 @@
+.cmp-profile-form {
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+    overflow: scroll;
+}
+
+.cmp-profile-form__form {
+    padding: 3.2rem 3.2rem 0 3.2rem;
+    width: 70rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cmp-profile-form__btn-wrap {
+    padding-bottom: 3.2rem;
+}
+
+@media (max-width: 700px) {
+
+    .cmp-profile-form__formform__form {
+        width: 60rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cmp-profile-form__form {
+        width: 100dvw;
+    }
+}

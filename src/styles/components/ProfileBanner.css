@@ -1,0 +1,288 @@
+.cmp-profile-banner {
+    margin-bottom: 4rem;
+    background-color: var(--clr-secondary);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0.4rem;
+}
+
+.cmp-profile-banner__bg-wrap {
+    position: relative;
+}
+
+.cmp-profile-banner__bg-img {
+    width: 100dvw;
+    height: 36rem;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+.cmp-profile-banner__content-wrap {
+    position: absolute;
+    left: 10%;
+    bottom: -5%;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.cmp-profile-banner__profile-img {
+    width: 25rem;
+    height: 25rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.2rem solid var(--clr-secondary-light);
+}
+
+.cmp-profile-banner__user-data-wrap {
+    flex-grow: 1;
+    padding: 1.8rem 2.4rem;
+    background-color: rgba(150, 150, 150, 0.3);
+    backdrop-filter: blur(3px);
+    border-radius: 0.4rem;
+}
+
+.cmp-profile-banner__bottom-content-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cmp-profile-banner__top-content-wrap {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    justify-content: space-between;
+}
+
+.cmp-profile-banner__name-wrap {
+    display: flex;
+    gap: 1.4rem;
+}
+
+.cmp-profile-banner__full-name {
+    font-size: 3.6rem;
+    text-wrap: nowrap;
+}
+
+.cmp-profile-banner__nickname {
+    font-size: 3.6rem;
+    color: var(--clr-gray-300);
+}
+
+.cmp-profile-banner__user-data-wrap .cmp-profile-banner__tag-container {
+    margin-top: 1.2rem;
+}
+
+.cmp-profile-banner__place-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cmp-profile-banner__place-icon {
+    width: 3rem;
+    height: 3rem;
+    fill: var(--clr-red-light);
+}
+
+.cmp-profile-banner__place-name {
+    font-size: 2rem;
+}
+
+.cpm-profile-banner__connect-btn {
+    background-color: var(--clr-green);
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2.4rem;
+    letter-spacing: 1.4px;
+    padding: 0.6rem 0.9rem;
+    transition: background-color 0.3s;;
+}
+
+.cpm-profile-banner__connect-btn:hover {
+    background-color: var(--clr-green-dark);
+}
+
+.cmp-profile-banner__description-wrap {
+    background-color: var(--clr-secondary);
+}
+
+.cmp-profile-banner__description {
+    width: 90%;
+    margin: 0 auto 2.4rem auto;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: var(--clr-gray-300);
+}
+
+.cmp-profile-banner__description-header-wrap {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.8rem auto 0 auto;
+    padding: 1.6rem 0;
+}
+
+.cmp-profile-banner__about-heading {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.cmp-profile-banner__joined-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.cmp-profile-banner__hash {
+    color: var(--clr-purple-light);
+    font-weight: bold;
+    font-size: 3.6rem;
+}
+
+.cmp-profile-banner__joined {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cmp-profile-banner__stats-wrap {
+    background-color: var(--clr-secondary-light);
+    padding: 0 5%;
+}
+
+.cmp-profile-banner__settings-btn {
+    display: flex;
+    align-items: center;
+    font-size: 3.6rem;
+    background-color: transparent;
+    cursor: pointer;
+    transition: color 0.3s;
+    color: #fff;
+}
+
+.cmp-profile-banner__settings-btn:hover {
+    color: var(--clr-gray-400);
+}
+
+@media (max-width: 1000px) {
+
+    .cmp-profile-banner__content-wrap {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .cmp-profile-banner__name-wrap {
+        display: block;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .cmp-profile-banner__bg-img {
+        height: 46rem;
+    }
+
+    .cmp-profile-banner__profile-img {
+        width: 21rem;
+        height: 21rem;
+    }
+
+    .cmp-profile-banner__content-wrap {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: 100%;
+        gap: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cmp-profile-banner__user-data-wrap {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    .cmp-profile-banner__name-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .cmp-profile-banner__nickname {
+        font-size: 3rem;
+    }
+
+    .cmp-profile-banner__about-heading {
+        font-size: 2.4rem;
+    }
+
+    .cmp-profile-banner__hash {
+        font-size: 2.4rem;
+    }
+
+    .cmp-profile-banner__joined {
+        font-size: 1.8rem;
+    }
+
+    .cmp-profile-banner__settings-btn {
+        position: absolute;
+        right: 5%;
+        top: 1.8rem;
+    }
+
+    .cmp-profile-banner__tag-container {
+        justify-content: center;
+    }
+
+    .cmp-profile-banner__bottom-content-wrap {
+        margin-bottom: 3.6rem;
+    }
+
+    .cpm-profile-banner__connect-btn {
+        border-radius: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100dvw;
+    }
+}
+
+/*@media (max-width: 530px) {*/
+
+/*    .cpm-profile-banner__top-container {*/
+/*        flex-direction: column;*/
+/*        align-items: center;*/
+/*    }*/
+
+/*    .cpm-profile-banner__photo {*/
+/*        width: auto;*/
+/*    }*/
+
+/*    .cpm-profile-banner__photo-wrap {*/
+/*        position: relative;*/
+/*    }*/
+
+/*    .cmp-profile-banner__settings-btn {*/
+/*        top: auto;*/
+/*        bottom: -1.2rem;*/
+/*        right: -1.2rem;*/
+/*        font-size: 4rem;*/
+/*        border-radius: 0.4rem;*/
+/*        background-color: var(--clr-secondary-light);*/
+/*    }*/
+/*}*/

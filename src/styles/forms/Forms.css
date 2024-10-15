@@ -1,0 +1,31 @@
+/* SUBMIT BUTTON CONTAINER*/
+.cmp-login__btn-wrap,
+.cmp-profile-form__btn-wrap,
+.cmp-art-edit-form__btn-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.6rem;
+    transition: var(--transition-default);
+}
+
+/* SUBMIT BUTTON */
+.cmp-login__button,
+.cmp-profile-form__button,
+.cmp-art-edit-form__button {
+    background-color: var(--clr-green);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 2rem;
+    justify-self: center;
+    letter-spacing: 1.4px;
+    padding: 0.8rem 1.6rem;
+    transition: var(--transition-default);
+}
+
+.cmp-login__button:hover,
+.cmp-profile-form__button:hover,
+.cmp-art-edit-form__button:hover {
+    background-color: var(--clr-green-dark);
+}

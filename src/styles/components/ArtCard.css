@@ -1,0 +1,99 @@
+.cmp-art-card {
+    background-size: cover;
+    height: 40rem;
+    transition: var(--transition-default);
+    position: relative;
+    border-radius: 0.4rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.cmp-art-card:hover {
+    cursor: pointer;
+    box-shadow: 0 1.5rem 2rem 0 rgba(0, 0, 0, 0.5), inset 0 0 10rem 3rem rgba(0, 0, 0, 0.7);
+    scale: 1.02;
+}
+
+.cmp-art-card__panel-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cmp-art-card__icon-sign-wrap {
+    margin-top: 0.4rem;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cmp-art-card__icon-sign {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 2px 6px;
+    border-radius: 0.4rem;
+}
+
+.cmp-art-card__icons-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    right: -7rem;
+    top: 0.8rem;
+    transition: var(--transition-default);
+}
+
+.cmp-art-card__icon {
+    font-size: 3rem;
+}
+
+.cmp-art-card__icons-wrap--visible {
+    right: 0.8rem;
+}
+
+.cmp-art-card__category-icon-wrap,
+.cmp-art-card__like-icon-wrap,
+.cmp-art-card__dislike-icon-wrap,
+.cmp-art-card__comment-icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    transition: var(--transition-default);
+}
+
+.cmp-art-card__category-icon-wrap {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+}
+
+.cmp-art-card__category-icon-wrap:hover,
+.cmp-art-card__like-icon-wrap:hover,
+.cmp-art-card__dislike-icon-wrap:hover,
+.cmp-art-card__comment-icon-wrap:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.cmp-art-card__title-wrap {
+    position: absolute;
+    bottom: 0;
+    padding: 1.6rem 0.8rem;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.cmp-art-card__title {
+    font-size: 2.4rem;
+}
