@@ -1,19 +1,23 @@
 .cmp-slider {
-    z-index: 999;
     position: fixed;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
     background: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     backdrop-filter: blur(3px);
+    top: 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.cmp-slider--visible {
     opacity: 1;
+    right: 0;
+    left: 0;
 }
 
 .cmp-slider--hidden {
     opacity: 0;
-    right: -100rem;
+    right: -1000rem;
 }
 
 .cmp-slider__content-wrap {

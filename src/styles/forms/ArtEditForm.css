@@ -16,3 +16,17 @@
 .cmp-art-edit-form__btn-wrap {
     padding-bottom: 3.2rem;
 }
+
+@media (max-width: 700px) {
+
+    .cmp-art-edit-form__form {
+        width: 60rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cmp-art-edit-form__form {
+        width: 100dvw;
+    }
+}

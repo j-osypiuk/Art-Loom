@@ -17,3 +17,16 @@
     padding-bottom: 3.2rem;
 }
 
+@media (max-width: 700px) {
+
+    .cmp-profile-form__formform__form {
+        width: 60rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cmp-profile-form__form {
+        width: 100dvw;
+    }
+}

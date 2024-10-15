@@ -6,6 +6,14 @@ const ModalSlide = ({children, props}) => {
     const outBlurTransition = "right 0.01s ease-in-out 0.3s, opacity 0.3s ease-in-out";
 
     useEffect(() => {
+        if (props.showSlide) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [props.showSlide]);
+
+    useEffect(() => {
         const handleKeyPress = (event) => {
             if (event.code === "Escape") {
                 props.setShowSlide(false);
@@ -28,7 +36,7 @@ const ModalSlide = ({children, props}) => {
 
     return (
         <div style={{transition: `${props.showSlide ? inBlurTransition : outBlurTransition}`}}
-             className={`cmp-slider ${props.showSlide ? "" : "cmp-slider--hidden"}`}
+             className={`cmp-slider ${props.showSlide ? "cmp-slider--visible" : "cmp-slider--hidden"}`}
         >
             <div className={`cmp-slider__content-wrap  ${props.showSlide ? "" : "cmp-slider__content-wrap--hidden"}`}>
                 {children}

@@ -1,12 +1,10 @@
 import {CiSettings} from "react-icons/ci";
 import StatsBanner from "./StatsBanner.jsx";
-import BannerContent from "./BannerContent.jsx";
 import React, {useState} from "react";
 import ModalSlide from "./ModalSlide.jsx";
 import ProfileForm from "./ProfileForm.jsx";
 import Tag from "./Tag.jsx";
-import { PiMapPinFill } from "react-icons/pi";
-import { GoBell } from "react-icons/go";
+import {PiMapPinFill} from "react-icons/pi";
 import TextWrap from "./TextWrap.jsx";
 import {Colors} from "../utils/colors.js";
 
@@ -65,17 +63,10 @@ const ProfileBanner = ({props}) => {
                         <p className="cmp-profile-banner__joined">joined: 14-10-2024</p>
                     </div>
                 </div>
-                <p className="cmp-profile-banner__description">
+                <div className="cmp-profile-banner__description">
                     <TextWrap props={{height: props.content.textHeight, fontSize: 1.6, color: Colors.GRAY_300, lineHeight: 1.3, text: props.content.description}}/>
-                </p>
+                </div>
             </div>
-            {/*<div className="cpm-profile-banner__top-container">*/}
-            {/*    <div className="cpm-profile-banner__photo-wrap">*/}
-            {/*        <img src={props.thumbnailUrl} alt="User profile photo" className="cpm-profile-banner__photo"/>*/}
-
-            {/*    </div>*/}
-            {/*    <BannerContent props={props.content} />*/}
-            {/*</div>*/}
             <div className="cmp-profile-banner__stats-wrap">
                 <StatsBanner props={props.stats} />
             </div>
