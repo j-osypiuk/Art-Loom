@@ -32,7 +32,7 @@ const ArtBanner = ({props}) => {
                     </div>
                 </div>
                 {}
-                <StatsBanner props={props.stats} />
+                <StatsBanner props={props.stats} showDate={true}/>
             </div>
         </>
     )
