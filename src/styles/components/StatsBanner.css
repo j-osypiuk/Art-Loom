@@ -38,7 +38,6 @@
 
 .cmp-stats-banner__like-icon-wrap {
     box-shadow: 0 0 0.8rem var(--clr-green-dark);
-    color: var(--clr-green-dark);
 }
 
 .cmp-stats-banner__dislike-icon-wrap {
