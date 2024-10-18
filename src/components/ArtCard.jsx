@@ -2,6 +2,8 @@ import {FiMusic} from "react-icons/fi";
 import {BiLike} from "react-icons/bi";
 import {BiDislike} from "react-icons/bi";
 import {FaRegCommentAlt} from "react-icons/fa";
+import Tag from "./Tag.jsx";
+import React from "react";
 
 const ArtCard = ({props}) => {
 
@@ -14,11 +16,8 @@ const ArtCard = ({props}) => {
         <div onMouseEnter={handleMouseEvent}
              onMouseLeave={handleMouseEvent}
              className="cmp-art-card"
-             id={props.id}
-             style={{backgroundImage: `url(${props.thumbnailPath})`}}>
-            <div className="cmp-art-card__category-icon-wrap">
-                <FiMusic className="cmp-art-card__icon default-icon"/>
-            </div>
+             id={props.id}>
+            <img className="cmp-art-card__thumbnail-img" src={props.thumbnailPath} alt="Thumbnail image" />
             <div className="cmp-art-card__icons-wrap">
                 <div className="cmp-art-card__panel-wrap">
                     <div className="cmp-art-card__like-icon-wrap">
@@ -38,7 +37,7 @@ const ArtCard = ({props}) => {
                 </div>
                 <div className="cmp-art-card__panel-wrap">
                     <div className="cmp-art-card__comment-icon-wrap">
-                        <FaRegCommentAlt className="cmp-art-card__icon default-icon"/>
+                        <FaRegCommentAlt className="cmp-art-card__icon cmp-art-card__icon-comment default-icon"/>
                     </div>
                     <div className="cmp-art-card__icon-sign-wrap">
                         <span className="cmp-art-card__icon-sign">{props.commentsCount}</span>
@@ -47,6 +46,15 @@ const ArtCard = ({props}) => {
             </div>
             <div className="cmp-art-card__title-wrap">
                 <h3 className="cmp-art-card__title">{props.title}</h3>
+                <div className="cmp-art-card__tag-container tag-container">
+                    {
+                        props.tags.map((tag) => {
+                            return (
+                                <Tag key={tag.name} props={{text: tag.name, bgColor: tag.bgColor}}></Tag>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )

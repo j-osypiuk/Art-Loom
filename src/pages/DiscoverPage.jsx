@@ -1,5 +1,12 @@
+import DiscoverSection from "../components/DiscoverSection.jsx";
+
 const DiscoverPage = () => {
-    return (<h1>Discover page</h1>);
+    return (
+        <div className="cmp-container">
+            <h1>Discover page</h1>
+            <DiscoverSection/>
+        </div>
+    );
 }
 
 export default DiscoverPage;
