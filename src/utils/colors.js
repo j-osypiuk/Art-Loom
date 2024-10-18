@@ -22,3 +22,8 @@ export const Colors = Object.freeze({
     PURPLE_LIGHT: "--clr-purple-light",
 })
 
+export const getRandomDarkColor = () => {
+    const darkKeys = Object.keys(Colors).filter(key => key.includes("DARK"));
+    return Colors[darkKeys[Math.floor(Math.random() * darkKeys.length)]];
+}
+

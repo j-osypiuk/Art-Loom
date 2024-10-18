@@ -1,9 +1,15 @@
 import DiscoverSection from "../components/DiscoverSection.jsx";
+import DiscoverBanner from "../components/DiscoverBanner.jsx";
+import React, {useRef} from "react";
 
 const DiscoverPage = () => {
+
+    const discoverSectionRef = useRef(null);
+
     return (
         <div className="cmp-container">
-            <h1>Discover page</h1>
+            <DiscoverBanner scrollSectionRef={discoverSectionRef} />
+            <div style={{marginTop: "3rem"}} ref={discoverSectionRef}></div>
             <DiscoverSection/>
         </div>
     );
