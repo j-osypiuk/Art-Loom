@@ -1,4 +1,5 @@
-.cmp-art-card {
+.cmp-art-card,
+.cmp-art-card__loading-wrap {
     position: relative;
     border-radius: 0.4rem;
     overflow: hidden;
@@ -125,6 +126,12 @@
 
 .cmp-art-card__tag-container {
     justify-content: center;
+}
+
+.cmp-art-card__loading-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 650px) {

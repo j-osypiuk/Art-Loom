@@ -274,6 +274,22 @@ const DiscoverSection = () => {
                     {name: "WRITING", bgColor: Colors.PURPLE_DARK},
                 ],
             }}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
+            <ArtCard props={undefined}/>
         </div>
     )
 }
