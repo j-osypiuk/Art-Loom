@@ -27,3 +27,8 @@ export const getRandomDarkColor = () => {
     return Colors[darkKeys[Math.floor(Math.random() * darkKeys.length)]];
 }
 
+export const getRandomLightColor = () => {
+    const darkKeys = Object.keys(Colors).filter(key => key.includes("LIGHT"));
+    return Colors[darkKeys[Math.floor(Math.random() * darkKeys.length)]];
+}
+

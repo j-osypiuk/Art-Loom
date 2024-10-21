@@ -43,7 +43,7 @@
 }
 
 .cmp-discover-banner__heading {
-    font-size: 12rem;
+    font-size: 11.6rem;
     font-weight: 900;
     width: 80%;
     text-align: center;
@@ -53,4 +53,25 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 5;
+}
+
+@media (max-width: 1250px) {
+
+    .cmp-discover-banner__heading {
+        font-size: 9.8rem;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .cmp-discover-banner__heading {
+        font-size: 7.4rem;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .cmp-discover-banner__heading {
+        font-size: 5.2rem;
+    }
 }

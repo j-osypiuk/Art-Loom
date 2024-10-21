@@ -6,12 +6,7 @@ const DiscoverBanner = ({scrollSectionRef}) => {
     const btnRef = useRef(null);
 
     const handleBtnClick = () => {
-        window.scrollBy({
-            top: window.innerHeight,
-            behavior: 'smooth'
-        });
-
-        // scrollSectionRef.current.scrollIntoView({behavior: "smooth"});
+        scrollSectionRef.current.scrollIntoView({behavior: "smooth"});
     }
 
     return (

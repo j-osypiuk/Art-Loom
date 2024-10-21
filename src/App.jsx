@@ -26,6 +26,7 @@ import "./styles/components/FileUpload.css"
 import "./styles/forms/ArtEditForm.css"
 import "./styles/components/DiscoverBanner.css"
 import "./styles/components/LoadingSpinner.css"
+import "./styles/pages/DiscoverPage.css"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
