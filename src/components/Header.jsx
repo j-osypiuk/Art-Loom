@@ -53,6 +53,9 @@ const Header = () => {
                         <li>
                             <Link className="cmp-header__nav-link" to="/profile">Profile</Link>
                         </li>
+                        <li>
+                            <Link className="cmp-header__nav-link" to="/gallery">Gallery</Link>
+                        </li>
                     </ul>
                 </div>
                 <div className="cmp-header__welcome_wrap">

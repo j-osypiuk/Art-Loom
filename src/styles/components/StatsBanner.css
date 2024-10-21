@@ -6,6 +6,7 @@
     background-color: var(--clr-secondary-light);
     border-bottom-right-radius: 0.4rem;
     border-bottom-left-radius: 0.4rem;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(30, 30, 34, 0.5);
 }
 
 .cmp-stats-banner__content-wrap {
