@@ -4,6 +4,7 @@ import {Colors} from "../utils/colors.js";
 import TextWrap from "../components/TextWrap.jsx";
 import Tag from "../components/Tag.jsx";
 import StatsBanner from "../components/StatsBanner.jsx";
+import CommentSection from "../components/CommentSection.jsx";
 
 const GalleryArtPage = () => {
 
@@ -60,6 +61,7 @@ const GalleryArtPage = () => {
                 </div>
             </div>
             <StatsBanner props={bannerContent.stats} showDate={true}/>
+            <CommentSection />
         </div>
     )
 }
