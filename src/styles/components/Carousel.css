@@ -1,0 +1,74 @@
+.cmp-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3.2rem 0;
+}
+
+.cmp-carousel__slide-wrap {
+    position: relative;
+}
+
+.cmp-carousel__slide {
+    border-radius: 0.4rem;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(19, 19, 23, 0.5);
+    object-fit: contain;
+    height: 80dvh;
+    max-width: 90dvw;
+}
+
+.cmp-carousel__slide--hidden {
+    display: none;
+}
+
+.cmp-carousel__arrow-left,
+.cmp-carousel__arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4rem;
+    height: 4rem;
+    color: #fff;
+    transition: var(--transition-default);
+}
+
+.cmp-carousel__arrow-left:hover,
+.cmp-carousel__arrow-right:hover {
+    cursor: pointer;
+    color: var(--clr-gray-400);
+}
+
+.cmp-carousel__arrow-left {
+    left: 0;
+    transform: translateX(-150%);
+}
+
+.cmp-carousel__arrow-right {
+    right: 0;
+    transform: translateX(150%);
+}
+
+.cmp-carousel__indicator-wrap {
+    position: absolute;
+    display: flex;
+    bottom: -1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cmp-carousel__indicator {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 100%;
+    margin: 0 0.3rem;
+    transition: var(--transition-default);
+}
+
+.cmp-carousel__indicator:hover {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.cmp-carousel__indicator--inactive {
+    background-color: var(--clr-gray-400);;
+}

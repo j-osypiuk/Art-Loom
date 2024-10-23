@@ -5,6 +5,7 @@ import TextWrap from "../components/TextWrap.jsx";
 import Tag from "../components/Tag.jsx";
 import StatsBanner from "../components/StatsBanner.jsx";
 import CommentSection from "../components/CommentSection.jsx";
+import {Carousel} from "../components/Carousel.jsx";
 
 const GalleryArtPage = () => {
 
@@ -61,6 +62,12 @@ const GalleryArtPage = () => {
                 </div>
             </div>
             <StatsBanner props={bannerContent.stats} showDate={true}/>
+            <Carousel sources={[
+                "src/assets/thumbnails/art-thumbnail-12.jpg",
+                "src/assets/thumbnails/art-thumbnail-4.jpg",
+                "src/assets/thumbnails/art-thumbnail-18.jpg",
+                "src/assets/white-bg.jpg"
+            ]}/>
             <CommentSection />
         </div>
     )

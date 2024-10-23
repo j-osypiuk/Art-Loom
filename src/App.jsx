@@ -31,6 +31,7 @@ import "./styles/pages/GalleryArtPage.css"
 import "./styles/components/UserBanner.css"
 import "./styles/components/Comment.css"
 import "./styles/components/CommentSection.css"
+import "./styles/components/Carousel.css"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
