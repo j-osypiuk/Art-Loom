@@ -63,10 +63,9 @@ const GalleryArtPage = () => {
             </div>
             <StatsBanner props={bannerContent.stats} showDate={true}/>
             <Carousel sources={[
-                "src/assets/thumbnails/art-thumbnail-12.jpg",
-                "src/assets/thumbnails/art-thumbnail-4.jpg",
-                "src/assets/thumbnails/art-thumbnail-18.jpg",
-                "src/assets/white-bg.jpg"
+                "src/assets/gallery/coast_1.jpg",
+                "src/assets/gallery/coast_2.jpg",
+                "src/assets/gallery/coast_3.jpg",
             ]}/>
             <CommentSection />
         </div>

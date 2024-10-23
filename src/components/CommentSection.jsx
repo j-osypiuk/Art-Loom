@@ -34,6 +34,7 @@ const CommentSection = ({props}) => {
 
     return (
         <div className="cmp-comment-section">
+            <h3 className="cmp-comment-section__header">Comments</h3>
             {
                 comments.map((comment) => <Comment key={comment.id} props={comment} />)
             }
