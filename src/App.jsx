@@ -27,12 +27,18 @@ import "./styles/forms/ArtEditForm.css"
 import "./styles/components/DiscoverBanner.css"
 import "./styles/components/LoadingSpinner.css"
 import "./styles/pages/DiscoverPage.css"
+import "./styles/pages/GalleryArtPage.css"
+import "./styles/components/UserBanner.css"
+import "./styles/components/Comment.css"
+import "./styles/components/CommentSection.css"
+import "./styles/components/Carousel.css"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import LoginPage from "./pages/LoginPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import UserPage from "./pages/UserPage.jsx";
 import Header from "./components/Header.jsx";
 import DiscoverPage from "./pages/DiscoverPage.jsx";
+import GalleryArtPage from "./pages/GalleryArtPage.jsx";
 
 
 function App() {
@@ -46,6 +52,7 @@ function App() {
                     <Route path="/discover" element={<DiscoverPage />} />
                     <Route path="/profile" element={<UserPage />} />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/gallery" element={<GalleryArtPage />} />
                 </Routes>
             </Router>
         </main>

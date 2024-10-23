@@ -1,0 +1,32 @@
+.cmp-user-banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.6rem;
+    background-color: var(--clr-secondary);
+    border-radius: 0.4rem;
+    padding: 0.8rem 1.6rem;
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem 0.2rem rgba(19, 19, 23, 0.5);
+    transition: var(--transition-default);
+}
+
+.cmp-user-banner:hover,
+.cmp-user-banner:focus {
+    cursor: pointer;
+    filter: brightness(0.75);
+}
+
+.cmp-user-banner__profile-img {
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.2rem solid var(--clr-secondary-light);
+}
+
+.cmp-user-banner__full-name {
+    color: var(--clr-gray-200);
+}
+
+.cmp-user-banner__nick-name {
+    color: var(--clr-gray-400);
+}
