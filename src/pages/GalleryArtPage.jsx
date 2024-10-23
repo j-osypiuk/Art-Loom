@@ -62,6 +62,7 @@ const GalleryArtPage = () => {
                 </div>
             </div>
             <StatsBanner props={bannerContent.stats} showDate={true}/>
+            <h3 className="cmp-gallery-page__carousel-heading">Gallery</h3>
             <Carousel sources={[
                 "src/assets/gallery/coast_1.jpg",
                 "src/assets/gallery/coast_2.jpg",
